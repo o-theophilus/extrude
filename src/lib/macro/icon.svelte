@@ -8,6 +8,7 @@
 		ArrowUp,
 		ArrowUpRight,
 		AtSign,
+		Award,
 		BadgeCheck,
 		BadgePercent,
 		Banknote,
@@ -27,6 +28,7 @@
 		Clock,
 		Compass,
 		Cookie,
+		Copy,
 		CornerRightDown,
 		createIcons,
 		Crosshair,
@@ -36,6 +38,7 @@
 		Facebook,
 		FileWarning,
 		FlagTriangleRight,
+		Gift,
 		Globe,
 		Hash,
 		Headset,
@@ -43,12 +46,14 @@
 		HeartPulse,
 		History,
 		House,
+		Images,
 		Info,
 		Instagram,
 		KeyRound,
 		Laptop,
 		LayoutDashboard,
 		LayoutGrid,
+		Layers,
 		Leaf,
 		Lightbulb,
 		ListFilter,
@@ -59,6 +64,7 @@
 		LogOut,
 		Mail,
 		MapPin,
+		Maximize,
 		Megaphone,
 		MessageCircle,
 		MessageCircleOff,
@@ -70,21 +76,25 @@
 		Package,
 		PanelLeftClose,
 		PanelLeftOpen,
+		Palette,
 		PencilRuler,
 		Phone,
 		Plane,
 		PlaneTakeoff,
 		Plus,
+		Printer,
 		Puzzle,
 		ReceiptText,
 		Repeat,
 		Reply,
 		Route,
+		Ruler,
 		RulerDimensionLine,
 		Save,
 		Scale,
 		Search,
 		SendHorizontal,
+		Shapes,
 		Share2,
 		Shield,
 		ShieldCheck,
@@ -112,6 +122,7 @@
 		Undo2,
 		User,
 		UserCheck,
+		UserRound,
 		Users,
 		UserX,
 		Utensils,
@@ -127,6 +138,17 @@
 			icons: {
 				Target,
 				Telescope,
+				Award,
+				Copy,
+				Gift,
+				Images,
+				Layers,
+				Maximize,
+				Palette,
+				Printer,
+				Ruler,
+				Shapes,
+				UserRound,
 				ArrowDownUp,
 				PanelLeftClose,
 				Globe,
@@ -359,6 +381,12 @@
    l8.576-11.095c3.36-4.347,4.069-10.185,1.847-15.21l-16.9-38.223c-4.048-9.155-15.747-11.82-23.39-5.356
    c-11.211,9.482-24.513,23.891-26.13,39.854c-2.851,28.144,9.219,63.622,54.862,106.222c52.73,49.215,94.956,55.717,122.449,49.057
    c15.594-3.777,28.056-18.919,35.921-31.317C323.568,266.34,319.334,255.114,309.712,252.351z"
+		/>
+	</svg>
+{:else if icon == 'tiktok'}
+	<svg width="{size}px" height="{size}px" viewBox="0 0 24 24" fill="currentColor">
+		<path
+			d="M16.6 5.82c-1.12-1.08-1.67-2.64-1.75-4.17H11.5v14.24c0 1.85-1.5 3.35-3.35 3.35a3.35 3.35 0 0 1-1.6-6.29c.52-.28 1.1-.44 1.7-.44.24 0 .48.02.7.06V8.9a7.35 7.35 0 0 0-.7-.04A7.34 7.34 0 0 0 1 16.2 7.34 7.34 0 0 0 8.15 23.5a7.34 7.34 0 0 0 7.35-7.3V9.4a10.7 10.7 0 0 0 5.98 1.82V7.6c-1.72 0-3.4-.62-4.88-1.78z"
 		/>
 	</svg>
 {:else if icon == 'twitter'}

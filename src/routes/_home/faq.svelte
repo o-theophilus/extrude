@@ -7,11 +7,11 @@
 </script>
 
 {#each faqs as x}
-	{#if x.category == 'Orders & Delivery'}
+	{#if x.category == 'General'}
 		<Group bind:ops category={x}></Group>
 	{/if}
 {/each}
 
 <br />
 
-<LinkArrow href="/">View More</LinkArrow>
+<LinkArrow href="/faq">View More</LinkArrow>

@@ -18,7 +18,9 @@
 						<img src="/logo.png" alt="logo" />
 						Extrude
 					</a>
-					<span class="tiny"> Instant delivery. From the sky. </span>
+					<span class="tiny"> Custom 3D printing and physical products. </span>
+					<span class="tiny">Lagos, Nigeria</span>
+					<a class="email" href="mailto:hello@extrude.ng">hello@extrude.ng</a>
 				</div>
 				<Socials />
 			</div>
@@ -74,8 +76,21 @@
 	}
 
 	.tiny {
+		display: block;
 		font-size: 0.8rem;
 		text-align: center;
+	}
+
+	.email {
+		display: block;
+		margin-top: 8px;
+		font-size: 0.8rem;
+		color: var(--ft2);
+		text-decoration: none;
+
+		&:hover {
+			color: var(--ft1);
+		}
 	}
 
 	.copyright {

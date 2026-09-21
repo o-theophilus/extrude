@@ -1,22 +1,13 @@
 <script>
 	import { Icon } from '$lib/macro';
+	import { waLink } from '$lib/whatsapp.js';
 
+	// Instagram/TikTok are placeholders — swap in the real profile links.
 	let platforms = [
-		{ name: 'whatsapp', href: '/' },
-		{ name: 'twitter', href: '/' },
-		{ name: 'facebook', href: '/' },
+		{ name: 'whatsapp', href: waLink('Hi Extrude, I have a question.') },
 		{ name: 'instagram', href: '/' },
-		{ name: 'youtube', href: '/' }
+		{ name: 'tiktok', href: '/' }
 	];
-	// let platforms = [
-	// 	{ name: 'whatsapp', href: 'https://wa.me/2347077033699?text=Hello Meji' },
-	// 	{ name: 'twitter', href: 'https://x.com/shop_meji_ng' },
-	// 	{ name: 'facebook', href: 'https://web.facebook.com/profile.php?id=61587524220060' },
-	// 	{ name: 'instagram', href: 'https://www.instagram.com/shop_meji_ng' },
-	// 	// { name: 'threads', href: 'https://www.threads.com/@shop_meji_ng' },
-	// 	// { name: 'bluesky', href: 'https://shop-meji-ng.bsky.social' },
-	// 	{ name: 'youtube', href: 'https://www.youtube.com/@shop_meji_ng' }
-	// ];
 </script>
 
 <div class="line">

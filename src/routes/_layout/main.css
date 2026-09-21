@@ -24,10 +24,10 @@
 
 	--ft1: light-dark(hsl(0, 0%, 5%), hsl(0, 0%, 95%));
 	--ft2: light-dark(hsl(0, 0%, 30%), hsl(0, 0%, 60%));
+
 	--ol: light-dark(hsl(0, 0%, 85%), hsl(0, 0%, 25%));
 	--bg3: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 20%));
 	--bg2: light-dark(hsl(213, 43%, 96%), hsl(0, 0%, 15%));
-	/* --bg1: light-dark(hsl(210, 21%, 89%), hsl(0, 0%, 10%)); */
 	--bg1: light-dark(hsl(0, 0%, 97%), hsl(0, 0%, 10%));
 	--bg: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 5%));
 
@@ -66,10 +66,10 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 h1 {
-	font-size: 4rem;
+	font-size: 5rem;
 }
 h2 {
-	font-size: 2.6rem;
+	font-size: 3.2rem;
 }
 h3 {
 	font-size: 2rem;
@@ -97,12 +97,6 @@ hr {
 	border: none;
 	border-top: 2px solid var(--input);
 }
-
-/* .page_title {
-	color: var(--ft1);
-	font-size: 1.5rem;
-	font-weight: 800;
-} */
 
 .line {
 	display: flex;

@@ -1,4 +1,28 @@
 <script>
+	import { Icon } from '$lib/macro';
+
+	let steps = [
+		{
+			title: 'Tell us what you need',
+			text: 'Send us your 3D file, photo, sketch or simply describe what you have in mind.',
+			icon: 'message-circle'
+		},
+		{
+			title: 'Get your quote',
+			text: "We'll review the requirements and send you a price and estimated turnaround.",
+			icon: 'receipt-text'
+		},
+		{
+			title: 'We print',
+			text: 'Once everything is approved, your print goes into production.',
+			icon: 'printer'
+		},
+		{
+			title: 'Collect or receive',
+			text: 'Pick up your finished print or have it delivered to you.',
+			icon: 'package'
+		}
+	];
 </script>
 
 <div class="orientation grid_container">
@@ -6,34 +30,18 @@
 		<div class="line"></div>
 	</div>
 
-	<div class="grid_3a gap_16">
-		<div class="card a">
-			<div class="block bg_6 brad_16 outline">
-				<img src="/image/home.how.1.png" alt="Request a delivery" />
-				<div class="padding_24">
-					<h4>Request a delivery</h4>
-					<p class="margin_16">We prepare a delivery drone for flight instantly.</p>
+	<div class="grid_4 gap_16">
+		{#each steps as x, i}
+			<div class="card" data-step={String(i + 1).padStart(2, '0')}>
+				<div class="block bg_6 brad_16 outline padding_24">
+					<div class="icon left bg_4 fc_2">
+						<Icon icon={x.icon} size="24" />
+					</div>
+					<h4 class="margin_16">{x.title}</h4>
+					<p class="margin_16">{x.text}</p>
 				</div>
 			</div>
-		</div>
-		<div class="card b">
-			<div class="block bg_6 brad_16 outline">
-				<img src="/image/home.how.2.png" alt="Select a drop zone" />
-				<div class="padding_24">
-					<h4>Choose a drop zone</h4>
-					<p class="margin_16">We calculate the fastest, safest route through the sky.</p>
-				</div>
-			</div>
-		</div>
-		<div class="card c">
-			<div class="block bg_6 brad_16 outline">
-				<img src="/image/home.how.3.png" alt="Receive your delivery" />
-				<div class="padding_24">
-					<h4>Receive your delivery</h4>
-					<p class="margin_16">Your order lands with precision at your chosen drop zone.</p>
-				</div>
-			</div>
-		</div>
+		{/each}
 	</div>
 </div>
 
@@ -82,6 +90,8 @@
 		justify-content: center;
 
 		&::before {
+			content: attr(data-step);
+
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -91,8 +101,8 @@
 			height: var(--width);
 
 			background-color: var(--bg2);
-			font-size: 2rem;
-			line-height: 0;
+			font-size: 1.2rem;
+			font-weight: 800;
 			outline: 1px solid var(--ol);
 			outline-offset: -1px;
 			color: var(--ft1);
@@ -104,22 +114,9 @@
 				bottom: calc(100% + var(--gap));
 			}
 		}
-		&.a::before {
-			content: '01';
-		}
-		&.b::before {
-			content: '02';
-		}
-		&.c::before {
-			content: '03';
-		}
 	}
 
 	.block {
-		overflow: hidden;
 		height: 100%;
-		img {
-			height: unset;
-		}
 	}
 </style>

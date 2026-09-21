@@ -1,31 +1,20 @@
 <script>
 	import { Link } from '$lib/button';
+	import { module } from '$lib/store.svelte.js';
+	import PrivacyPopup from './privacy.popup.svelte';
 </script>
 
 <section>
 	<div class="block">
-		<div class="title">Quick Links</div>
-		<Link href="/">Home</Link>
-		<Link href="/about">About</Link>
-		<Link href="/">Contact Us</Link>
-		<!-- <Link href="/contact">Contact Us</Link> -->
-	</div>
-	<div class="block">
-		<div class="title">Discover</div>
-		<Link href="/">Blog</Link>
-		<Link href="/partner">Partner</Link>
-		<Link href="/">FAQ</Link>
-		<!-- <Link href="/blog">Blog</Link> -->
-		<!-- <Link href="/faq">FAQ</Link> -->
+		<div class="title">Explore</div>
+		<Link href="/#what-we-print">What We Print</Link>
+		<Link href="/#how-it-works">How It Works</Link>
+		<Link href="/#materials">Materials</Link>
+		<Link href="/#faq">FAQ</Link>
 	</div>
 	<div class="block">
 		<div class="title">Legal</div>
-		<Link href="/">Terms & Conditions</Link>
-		<Link href="/">Privacy Policy</Link>
-		<Link href="/">Cookie Policy</Link>
-		<!-- <Link href="/legal/terms">Terms & Conditions</Link>
-		<Link href="/legal/policy">Privacy Policy</Link>
-		<Link href="/legal/policy#cookiesPolicy">Cookie Policy</Link> -->
+		<Link onclick={() => module.open(PrivacyPopup)}>Privacy Policy</Link>
 	</div>
 </section>
 
