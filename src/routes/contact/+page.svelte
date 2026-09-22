@@ -1,6 +1,6 @@
 <script>
 	import { Content, PageTitle } from '$lib/layout';
-	import { Icon, Log, Meta } from '$lib/macro';
+	import { Icon, Meta } from '$lib/macro';
 	import Form from './form.svelte';
 </script>
 
@@ -8,7 +8,6 @@
 	title="Contact Us"
 	description="Get support for your orders, payments, and inquiries — fast, simple, and reliable."
 />
-<Log entity_type={'page'} />
 
 <Content>
 	<PageTitle>
