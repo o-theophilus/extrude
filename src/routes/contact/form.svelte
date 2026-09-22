@@ -3,7 +3,7 @@
 	import { Button } from '$lib/button';
 	import { Dialogue } from '$lib/info';
 	import { Dropdown, IG } from '$lib/input';
-	import { EmailTemplate, Form } from '$lib/layout';
+	import { Form } from '$lib/layout';
 	import {  module } from '$lib/store.svelte.js';
 	import { template } from './form.template.js';
 
@@ -138,15 +138,7 @@
 	<div class="note">We typically respond within a few hours.</div>
 </Form>
 
-<div bind:this={email_template} style="display: none;">
-	<EmailTemplate>
-		Name: {'{'}name{'}'}
-		<br />
-		Email: {'{'}email{'}'}
-		<br /><br />
-		{'{'}message{'}'}
-	</EmailTemplate>
-</div>
+
 
 <style>
 	.note {
