@@ -1,5 +1,8 @@
 <script>
+	import { LinkArrow } from '$lib/button';
 	import { Icon } from '$lib/macro';
+	import { module } from '$lib/store.svelte.js';
+	import QuotePopup from './quote.popup.svelte';
 
 	let steps = [
 		{
@@ -25,27 +28,54 @@
 	];
 </script>
 
-<div class="orientation grid_container">
-	<div class="steps">
-		<div class="line"></div>
-	</div>
-
-	<div class="grid_4 gap_16">
-		{#each steps as x, i}
-			<div class="card" data-step={String(i + 1).padStart(2, '0')}>
-				<div class="block bg_6 brad_16 outline padding_24">
-					<div class="icon left bg_4 fc_2">
-						<Icon icon={x.icon} size="24" />
+<div class="bg">
+	<section>
+		<div id="how-it-works" class="padding_5">
+			<h6 class="section_title">
+				<div class="chevron">
+					<Icon icon="logo-shape" size="16" />
+				</div>
+				How it Works
+			</h6>
+			<h2 class="center max_text margin_24">From idea to finished piece.</h2>
+			<div class="margin_40 grid_container">
+				<div class="orientation grid_container">
+					<div class="steps">
+						<div class="line"></div>
 					</div>
-					<h4 class="margin_16">{x.title}</h4>
-					<p class="margin_16">{x.text}</p>
+
+					<div class="grid_4 gap_16">
+						{#each steps as x, i}
+							<div class="card" data-step={String(i + 1).padStart(2, '0')}>
+								<div class="block bg_6 brad_16 outline padding_24">
+									<div class="icon left bg_4 fc_2">
+										<Icon icon={x.icon} size="24" />
+									</div>
+									<h4 class="margin_16">{x.title}</h4>
+									<p class="margin_16">{x.text}</p>
+								</div>
+							</div>
+						{/each}
+					</div>
 				</div>
 			</div>
-		{/each}
-	</div>
+
+			<div class="center margin_40">
+				<LinkArrow
+					onclick={() => {
+						module.open(QuotePopup);
+					}}>Request a Quote</LinkArrow
+				>
+			</div>
+		</div>
+	</section>
 </div>
 
 <style>
+	.bg {
+		background-color: #F26B1D;
+	}
+
 	.orientation {
 		--gap: 32px;
 		--width: 68px;

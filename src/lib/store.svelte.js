@@ -1,46 +1,3 @@
-import { browser } from '$app/environment';
-import { goto } from '$app/navigation';
-import { page } from '$app/state';
-
-
-export const app = $state({
-	user: {},
-	login: false,
-	highlight: null,
-	likes: [],
-	cart_items: [],
-	
-	item: {},
-	blog: {},
-	item_all_tags: [],
-	item_featured_tags: [],
-	blog_tags: [],
-	
-	axis_map: {},
-	price_map: {},
-	
-	token_name: 'token',
-	get token() {
-		let cookies = document.cookie.split(';');
-		for (let i in cookies) {
-			let temp = cookies[i].split('=');
-			if (temp[0].trim() === this.token_name) {
-				return temp[1];
-			}
-		}
-		return '';
-	},
-	set token(v) {
-		let day = v ? 1 : -10000;
-		let date = new Date();
-		date.setTime(date.getTime() + day * 24 * 60 * 60 * 1000);
-		if (browser) {
-			document.cookie = `${this.token_name}=${v};expires=${date.toUTCString()};path=/`;
-		}
-	}
-});
-
-
 export let module = $state({
 	module: null,
 	value: {},
@@ -54,15 +11,6 @@ export let module = $state({
 	}
 });
 
-export let loading = $state({
-	value: null,
-	open(message = 'Loading . . .') {
-		this.value = message
-	},
-	close() {
-		this.value = null;
-	}
-});
 
 export let notify = $state({
 	value: [],
@@ -87,48 +35,6 @@ export let notify = $state({
 });
 
 
-export const page_state = $state({
-	state: {},
-	get searchParams() { return this.state[page.data.page_name].searchParams },
-
-	clear(page_name) {
-		this.state[page_name] = {
-			searchParams: {},
-			data: null,
-			loaded: false
-		}
-	},
-	goto(page_name, obj) {
-		this.clear(page_name);
-		this.state[page_name].searchParams = obj;
-		goto(`/${page_name}`);
-	},
-	refresh() {
-		this.state[page.data.page_name].loaded = false
-		let ss = new URLSearchParams(this.state[page.data.page_name].searchParams);
-		page.url.search = ss.toString()
-		loading.open()
-		goto(page.url.href, { replaceState: true, invalidate: [true] });
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	},
-	set(obj) {
-		for (const [key, val] of Object.entries(obj)) {
-			this.state[page.data.page_name].searchParams[key] = val
-			if (!val) delete this.state[page.data.page_name].searchParams[key]
-			if (key != "page_no") delete this.state[page.data.page_name].searchParams["page_no"]
-		}
-		this.refresh();
-	},
-	set_data(page_name, obj) {
-		if (this.state[page_name]) {
-			this.state[page_name].data = obj;
-		}
-	}
-})
-
-
-
-export let isMobile = $state(false)
 export const scroll = (query) => {
 
 	let e = document.querySelector(query);

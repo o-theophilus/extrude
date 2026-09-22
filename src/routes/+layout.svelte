@@ -7,12 +7,9 @@
 </script>
 
 <main id="page_top">
-	<div class="page_header">
-		<Header />
-	</div>
+	<Header />
 	{@render children()}
 	<Footer />
-
 	<Module />
 </main>
 
@@ -25,11 +22,5 @@
 		transition:
 			background-color 0.2s ease-in-out,
 			color 0.2s ease-in-out;
-	}
-
-	.page_header {
-		z-index: 1;
-		position: sticky;
-		top: 0;
 	}
 </style>

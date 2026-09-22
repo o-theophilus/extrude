@@ -1,7 +1,8 @@
 <script>
 	import { Link } from '$lib/button';
 	import { module } from '$lib/store.svelte.js';
-	import PrivacyPopup from './privacy.popup.svelte';
+	import Policy from './legal.policy.svelte';
+	import Terms from './legal.terms.svelte';
 </script>
 
 <section>
@@ -14,7 +15,8 @@
 	</div>
 	<div class="block">
 		<div class="title">Legal</div>
-		<Link onclick={() => module.open(PrivacyPopup)}>Privacy Policy</Link>
+		<Link onclick={() => module.open(Policy)}>Privacy Policy</Link>
+		<Link onclick={() => module.open(Terms)}>Terms of Service</Link>
 	</div>
 </section>
 
