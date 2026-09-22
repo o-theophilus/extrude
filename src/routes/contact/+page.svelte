@@ -1,5 +1,5 @@
 <script>
-	import { Content, PageTitle } from '$lib/layout';
+	import { Content } from '$lib/layout';
 	import { Icon, Meta } from '$lib/macro';
 	import Form from './form.svelte';
 </script>
@@ -10,14 +10,6 @@
 />
 
 <Content>
-	<PageTitle>
-		{#snippet title()}
-			How Can We Help You Today?
-		{/snippet}
-		{#snippet copy()}
-			Get support for your orders, payments, and inquiries — fast, simple, and reliable.
-		{/snippet}
-	</PageTitle>
 
 	<div class="contact">
 		<a href="tel:+2347077033699" class="card">
