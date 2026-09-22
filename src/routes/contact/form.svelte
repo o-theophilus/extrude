@@ -4,7 +4,7 @@
 	import { Dialogue } from '$lib/info';
 	import { Dropdown, IG } from '$lib/input';
 	import { EmailTemplate, Form } from '$lib/layout';
-	import { app, loading, module } from '$lib/store.svelte.js';
+	import { app, module } from '$lib/store.svelte.js';
 	import { template } from './form.template.js';
 
 	let email_template;
@@ -42,7 +42,6 @@
 	const submit = async () => {
 		form.email_template = email_template.innerHTML.replace(/&amp;/g, '&');
 
-		loading.open('Sending Email . . .');
 		let resp = await fetch(`${import.meta.env.VITE_BACKEND}/contact`, {
 			method: 'post',
 			headers: {
@@ -52,7 +51,6 @@
 			body: JSON.stringify(form)
 		});
 		resp = await resp.json();
-		loading.close();
 
 		if (resp.status == 200) {
 			form = {};
