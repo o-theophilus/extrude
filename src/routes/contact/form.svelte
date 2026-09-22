@@ -4,7 +4,7 @@
 	import { Dialogue } from '$lib/info';
 	import { Dropdown, IG } from '$lib/input';
 	import { EmailTemplate, Form } from '$lib/layout';
-	import { app, module } from '$lib/store.svelte.js';
+	import {  module } from '$lib/store.svelte.js';
 	import { template } from './form.template.js';
 
 	let email_template;
@@ -46,7 +46,7 @@
 			method: 'post',
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: app.token
+				// Authorization: app.token
 			},
 			body: JSON.stringify(form)
 		});
