@@ -1,6 +1,5 @@
 <script>
-	import { LinkArrow } from '$lib/button';
-	import { Icon } from '$lib/macro';
+	import { LinkArrow, RoundButton } from '$lib/button';
 	import { module } from '$lib/store.svelte.js';
 	import QuotePopup from './quote.popup.svelte';
 
@@ -26,32 +25,75 @@
 			icon: 'package'
 		}
 	];
+
+	let scroller = $state();
+	let dragging = $state(false);
+	let pointerX = 0;
+	let startScroll = 0;
+
+	function onpointerdown(e) {
+		dragging = true;
+		pointerX = e.clientX;
+		startScroll = scroller.scrollLeft;
+		scroller.setPointerCapture(e.pointerId);
+	}
+
+	function onpointermove(e) {
+		if (!dragging) return;
+		scroller.scrollLeft = startScroll - (e.clientX - pointerX);
+	}
+
+	function onpointerup(e) {
+		dragging = false;
+		scroller.releasePointerCapture(e.pointerId);
+	}
+
+	function onwheel(e) {
+		if (Math.abs(e.deltaX) >= Math.abs(e.deltaY)) return;
+		e.preventDefault();
+		scroller.scrollLeft += e.deltaY;
+	}
+
+	function scroll(dir) {
+		const card = scroller.querySelector('.one');
+		const step = card ? card.getBoundingClientRect().width + 40 : scroller.clientWidth;
+		scroller.scrollBy({ left: dir * step, behavior: 'smooth' });
+	}
 </script>
 
 <div class="bg">
 	<section>
-		<div id="how-it-works" class="padding_5">
-			<h2 class="max_text margin_24">From idea to finished piece.</h2>
+		<div id="how-it-works" class="padding_5 grid_container">
+			<h2 class="max_text">From idea to finished piece.</h2>
 
-			<div class="margin_40 grid_container">
-				<div class="scroller">
-					{#each steps as x, i}
-						<div class="one brad_16 outline">
-							<div class="block bg_6 padding_24">
-								<div class="count">
-									{String(i + 1).padStart(2, '0')}
-								</div>
-								<div class="icon left bg_4 fc_2">
-									<Icon icon={x.icon} size="24" />
-								</div>
-								<h4 class="margin_16">{x.title}</h4>
-								<p class="margin_16">{x.text}</p>
+			<div
+				class="margin_40 scroller"
+				class:dragging
+				bind:this={scroller}
+				{onpointerdown}
+				{onpointermove}
+				{onpointerup}
+				onpointercancel={onpointerup}
+				{onwheel}
+			>
+				{#each steps as x, i}
+					<div class="one brad_16 outline">
+						<div class="block bg_6 padding_24">
+							<div class="icon left bg_4 fc_2">
+								{String(i + 1).padStart(2, '0')}
 							</div>
-
-							<img src="image/contact.jpg" alt="" />
+							<h4 class="center margin_16">{x.title}</h4>
+							<p class="center margin_16">{x.text}</p>
 						</div>
-					{/each}
-				</div>
+
+						<img src="image/contact.jpg" alt="" draggable="false" />
+					</div>
+				{/each}
+			</div>
+
+			<div class="arrows">
+				<RoundButton icon="arrow-left" onclick={() => scroll(-1)} />
+				<RoundButton icon="arrow-right" onclick={() => scroll(1)} />
 			</div>
 
 			<div class="center margin_40">
@@ -81,26 +123,54 @@
 
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		cursor: grab;
+		touch-action: pan-y;
+		user-select: none;
 
-		::-webkit-scrollbar {
+		&::-webkit-scrollbar {
 			display: none;
 		}
+
+		&.dragging {
+			cursor: grabbing;
+			scroll-snap-type: none;
+			scroll-behavior: unset;
+		}
+	}
+
+	.arrows {
+		display: flex;
+		gap: 8px;
+		flex-shrink: 0;
 	}
 
 	.one {
 		--size: 400px;
 
 		display: flex;
-		flex-shrink: 0;
-		width: calc(var(--size) * 2);
-		aspect-ratio: 2/1;
+		flex-direction: column;
+		/* aspect-ratio: 1/2; */
 
 		overflow: hidden;
+		flex: 0 0 100%;
 
-		scroll-snap-align: start;
+		@container (min-width: 400px) {
+			flex-direction: row;
+			aspect-ratio: 2/1;
+		}
+
+		@container (min-width: 880px) {
+			flex: 0 0 calc(var(--size) * 2);
+		}
+
+		scroll-snap-align: center;
 
 		.block {
 			width: 100%;
+			height: 100%;
+			align-content: center;
+			justify-items: center;
 		}
 
 		img {
