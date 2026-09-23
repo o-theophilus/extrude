@@ -29,7 +29,7 @@
 	];
 </script>
 
-<section>
+
 	<div class="bg margin_160">
 		<section>
 			<div id="materials" class="margin_160 grid_container">
@@ -62,4 +62,4 @@
 			</div>
 		</section>
 	</div>
-</section>
+
