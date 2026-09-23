@@ -15,20 +15,22 @@
 :root {
 	--cl1: #1d9bf0;
 	--cl1_: #187abb;
-	--cl2: light-dark(hsl(209, 58%, 84%),#011b33);
+	--cl2: light-dark(hsl(209, 58%, 84%), #011b33);
 	--cl3: #3bb75e;
 	--cl3_: rgb(27, 133, 27);
 	--yellow: rgb(255, 162, 0);
 	--overlay: rgba(128, 128, 128, 0.5);
 	--input: hsla(230, 30%, 41%, 0.1);
+	--cta: rgb(209, 52, 52);
+	--cta_: black;
 
 	--ft1_light: hsl(0, 0%, 5%);
-	--ft1_dark:  hsl(0, 0%, 95%);
+	--ft1_dark: hsl(0, 0%, 95%);
 	--ft2_light: hsl(0, 0%, 30%);
-	--ft2_dark:  hsl(0, 0%, 60%);
-	
-	
-	
+	--ft2_dark: hsl(0, 0%, 60%);
+
+
+
 	--ft1: light-dark(hsl(0, 0%, 5%), hsl(0, 0%, 95%));
 	--ft2: light-dark(hsl(0, 0%, 30%), hsl(0, 0%, 60%));
 
@@ -48,8 +50,13 @@ textarea,
 select,
 input,
 button,
-*, 
-h1,h2,h3,h4,h5,h6,
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
 	line-height: 150%;
 	margin: 0;
@@ -61,30 +68,45 @@ p {
 
 
 	font-family: "Lexend", sans-serif;
-	font-size: 16px;
+	font-size: 12px;
+
+	@media screen and (min-width: 600px) {
+		font-size: 16px;
+	}
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: "Sora", sans-serif;
 	font-weight: 800;
 	line-height: 120%;
+
 	* {
 		all: unset;
 	}
 }
+
 h1 {
 	font-size: 5rem;
 }
+
 h2 {
 	font-size: 3.2rem;
 }
+
 h3 {
 	font-size: 2rem;
 }
+
 h4 {
 	font-size: 1.6rem;
 }
-h6{
+
+h6 {
 	line-height: 150%;
 }
 

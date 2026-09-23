@@ -37,8 +37,8 @@
 
 			<div class="margin_40">
 				<Button
-					--button-background-color="var(--cl3)"
-					--button-background-color-hover="var(--cl3_)"
+					--button-background-color="var(--cta)"
+					--button-background-color-hover="var(--cta_)"
 					--button-color="white"
 					--button-outline-color="transparent"
 					icon2="arrow-right"
@@ -92,7 +92,7 @@
 		}
 
 		.right {
-			background-color: red;
+			background-color: gray;
 			aspect-ratio: 4/3;
 		}
 	}

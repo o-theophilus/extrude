@@ -13,20 +13,15 @@
 	<Work></Work>
 	<Why></Why>
 	<How></How>
-
-	<section>
-		<Spec></Spec>
-	</section>
+	<Spec></Spec>
 	<Design></Design>
 	<Print></Print>
+	<FAQ></FAQ>
+	<CTA></CTA>
+
 	<section>
-		<FAQ></FAQ>
-		<CTA></CTA>
-
-		<section>
-			<ToTop />
-		</section>
-
-		<div class="margin_80"></div>
+		<ToTop />
 	</section>
+
+	<div class="margin_80"></div>
 </div>

@@ -4,7 +4,7 @@
 	import { Dialogue } from '$lib/info';
 	import { Dropdown, IG } from '$lib/input';
 	import { Form } from '$lib/layout';
-	import {  module } from '$lib/store.svelte.js';
+	import { module } from '$lib/store.svelte.js';
 	import { template } from './form.template.js';
 
 	let email_template;
@@ -45,7 +45,7 @@
 		let resp = await fetch(`${import.meta.env.VITE_BACKEND}/contact`, {
 			method: 'post',
 			headers: {
-				'Content-Type': 'application/json',
+				'Content-Type': 'application/json'
 				// Authorization: app.token
 			},
 			body: JSON.stringify(form)
@@ -137,8 +137,6 @@
 
 	<div class="note">We typically respond within a few hours.</div>
 </Form>
-
-
 
 <style>
 	.note {

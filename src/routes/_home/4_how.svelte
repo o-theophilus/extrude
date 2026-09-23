@@ -31,32 +31,26 @@
 <div class="bg">
 	<section>
 		<div id="how-it-works" class="padding_5">
-			<h6 class="section_title">
-				<div class="chevron">
-					<Icon icon="logo-shape" size="16" />
-				</div>
-				How it Works
-			</h6>
-			<h2 class="center max_text margin_24">From idea to finished piece.</h2>
-			<div class="margin_40 grid_container">
-				<div class="orientation grid_container">
-					<div class="steps">
-						<div class="line"></div>
-					</div>
+			<h2 class="max_text margin_24">From idea to finished piece.</h2>
 
-					<div class="grid_4 gap_16">
-						{#each steps as x, i}
-							<div class="card" data-step={String(i + 1).padStart(2, '0')}>
-								<div class="block bg_6 brad_16 outline padding_24">
-									<div class="icon left bg_4 fc_2">
-										<Icon icon={x.icon} size="24" />
-									</div>
-									<h4 class="margin_16">{x.title}</h4>
-									<p class="margin_16">{x.text}</p>
+			<div class="margin_40 grid_container">
+				<div class="scroller">
+					{#each steps as x, i}
+						<div class="one brad_16 outline">
+							<div class="block bg_6 padding_24">
+								<div class="count">
+									{String(i + 1).padStart(2, '0')}
 								</div>
+								<div class="icon left bg_4 fc_2">
+									<Icon icon={x.icon} size="24" />
+								</div>
+								<h4 class="margin_16">{x.title}</h4>
+								<p class="margin_16">{x.text}</p>
 							</div>
-						{/each}
-					</div>
+
+							<img src="image/contact.jpg" alt="" />
+						</div>
+					{/each}
 				</div>
 			</div>
 
@@ -73,80 +67,46 @@
 
 <style>
 	.bg {
-		background-color: #F26B1D;
+		background-color: hsl(0, 0%, 5%);
+		color: var(--ft2_dark);
 	}
 
-	.orientation {
-		--gap: 32px;
-		--width: 68px;
+	h2 {
+		color: var(--ft1_dark);
+	}
+
+	.scroller {
+		display: flex;
+		gap: 40px;
+
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	.one {
+		--size: 400px;
 
 		display: flex;
-		gap: var(--gap);
+		flex-shrink: 0;
+		width: calc(var(--size) * 2);
+		aspect-ratio: 2/1;
 
-		.steps {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: var(--width);
-			flex-shrink: 0;
+		overflow: hidden;
 
-			.line {
-				width: 2px;
-				height: 100%;
-				background-color: var(--ol);
-			}
+		scroll-snap-align: start;
+
+		.block {
+			width: 100%;
 		}
 
-		@container (min-width: 580px) {
-			flex-direction: column;
-
-			.steps {
-				width: 100%;
-				height: var(--width);
-
-				.line {
-					height: 2px;
-					width: 100%;
-				}
-			}
+		img {
+			width: 100%;
+			aspect-ratio: 1/1;
+			object-fit: cover;
 		}
-	}
-
-	.card {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		&::before {
-			content: attr(data-step);
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			border-radius: 40%;
-			width: var(--width);
-			height: var(--width);
-
-			background-color: var(--bg2);
-			font-size: 1.2rem;
-			font-weight: 800;
-			outline: 1px solid var(--ol);
-			outline-offset: -1px;
-			color: var(--ft1);
-
-			position: absolute;
-			right: calc(100% + var(--gap));
-			@container (min-width: 580px) {
-				right: unset;
-				bottom: calc(100% + var(--gap));
-			}
-		}
-	}
-
-	.block {
-		height: 100%;
 	}
 </style>
