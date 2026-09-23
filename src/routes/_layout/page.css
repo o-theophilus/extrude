@@ -206,7 +206,15 @@
 			grid-template-columns: repeat(4, 1fr);
 		}
 	}
+	
+    .grid_4_b {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 
+		@container (min-width: 900px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
 
 	/************************ img */
 	/* img {
