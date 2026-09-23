@@ -154,6 +154,11 @@
 		container-type: inline-size;
 	}
 
+	.grid_2 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		
+	}
 	.grid_2_480 {
 		display: grid;
 
