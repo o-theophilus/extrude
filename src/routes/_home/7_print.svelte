@@ -41,7 +41,7 @@
 				Every print is different, so we price each job based on what it actually takes to produce.
 			</p>
 
-			<div class="grid_3 gap_a margin_80">
+			<div class="grid_4_b gap_a margin_80">
 				{#each pricingFactors as x}
 					<div class="card">
 						<div class="icon left bg_4 fc_2">
