@@ -12,13 +12,13 @@
 			Send us your idea, file, photo or sketch and let's work out what it will take to print it.
 		</p>
 
-		<div class="margin_40 row gap_16">
+		<div class="margin_40 row gap_16 center">
 			<Button
-				--button-background-color="var(--cl3)"
-				--button-background-color-hover="var(--cl3_)"
+				--button-background-color="var(--cta)"
+				--button-background-color-hover="var(--cta_)"
 				--button-color="white"
 				--button-outline-color="transparent"
-				icon2="arrow-up-right"
+				icon2="arrow-right"
 				onclick={() => {
 					module.open(QuotePopup);
 				}}

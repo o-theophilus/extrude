@@ -36,8 +36,8 @@
 <div class="bg">
 	<section id="what-we-print">
 		<div class="padding_5 grid_container">
-			<h2 class="center max_text">Get a quote for your print.</h2>
-			<p class="center max_text margin_16">
+			<h2 class="max_text">Get a quote for your print.</h2>
+			<p class="max_text margin_16">
 				Every print is different, so we price each job based on what it actually takes to produce.
 			</p>
 
@@ -53,7 +53,7 @@
 				{/each}
 			</div>
 
-			<div class="center margin_40">
+			<div class="margin_40">
 				<LinkArrow
 					onclick={() => {
 						module.open(QuotePopup);

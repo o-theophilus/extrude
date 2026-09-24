@@ -29,37 +29,54 @@
 	];
 </script>
 
+<div class="bg margin_160">
+	<section>
+		<div id="materials" class="margin_160 grid_container">
+			<h2 class="max_text">The right material for the job.</h2>
+			<p class="max_text margin_16">
+				Different projects need different properties. We offer a selection of materials and colours
+				to suit the way your print will look and be used.
+			</p>
 
-	<div class="bg margin_160">
-		<section>
-			<div id="materials" class="margin_160 grid_container">
-				<h2 class="max_text">The right material for the job.</h2>
-				<p class="max_text margin_16">
-					Different projects need different properties. We offer a selection of materials and
-					colours to suit the way your print will look and be used.
-				</p>
-
-				<div class="grid_3 gap_16 margin_80">
-					{#each materials as x}
-						<div class="tile bg_6 outline brad_16 padding_24">
-							<h4>{x.name}</h4>
-							<p class="margin_16">{x.text}</p>
-						</div>
-					{/each}
-				</div>
-
-				<div class="grid_4_b gap_16 margin_40">
-					{#each capabilities as x}
-						<div class="tile bg_6 outline brad_16 padding_24 center">
-							<div class="icon bg_4 fc_2">
-								<Icon icon={x.icon} size="24" />
-							</div>
-							<h4 class="margin_16">{x.value}</h4>
-							<p class="margin_16 font_08">{x.label}</p>
-						</div>
-					{/each}
-				</div>
+			<div class="spec margin_40">
+				{#each materials as x}
+					<div class="one">
+						<h4>{x.name}</h4>
+						<p>{x.text}</p>
+					</div>
+				{/each}
 			</div>
-		</section>
-	</div>
 
+			<div class="grid_4_b gap_16 margin_40">
+				{#each capabilities as x}
+					<div class="tile bg_6 outline brad_16 padding_24 center">
+						<div class="icon bg_4 fc_2 center">
+							<Icon icon={x.icon} size="24" />
+						</div>
+						<h4 class="margin_16">{x.value}</h4>
+						<p class="font_08">{x.label}</p>
+					</div>
+				{/each}
+			</div>
+		</div>
+	</section>
+</div>
+
+<style>
+	.one {
+		border-top: solid 1px var(--ol);
+		padding: 16px 0;
+		display: flex;
+		flex-direction: column;
+
+		h4 {
+			width: 12rem;
+			flex-shrink: 0;
+		}
+
+		@container (min-width:480px) {
+			align-items: center;
+			flex-direction: row;
+		}
+	}
+</style>

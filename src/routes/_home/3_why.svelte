@@ -34,7 +34,7 @@
 				production runs.
 			</p>
 
-			<div class="grid_4_b gap_a margin_80">
+			<div class="grid_4_b gap_40 margin_80">
 				{#each whyPrint as x}
 					<div >
 						<div class="icon left bg_4 fc_2">

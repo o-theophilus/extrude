@@ -77,7 +77,7 @@
 <div class="bg">
 	<section>
 		<div id="how-it-works" class="padding_5 grid_container">
-			<h2 class="max_text">From idea to finished piece.</h2>
+			<h2 class="center">From idea to finished piece.</h2>
 
 			<div
 				class="margin_40 scroller"
