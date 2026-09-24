@@ -1,7 +1,5 @@
 <script>
-	import { LinkArrow, RoundButton } from '$lib/button';
-	import { module } from '$lib/store.svelte.js';
-	import QuotePopup from './quote.popup.svelte';
+	import { RoundButton } from '$lib/button';
 
 	let steps = [
 		{
@@ -30,6 +28,21 @@
 	let dragging = $state(false);
 	let pointerX = 0;
 	let startScroll = 0;
+	let atStart = $state(true);
+	let atEnd = $state(false);
+
+	function updateEdges() {
+		atStart = scroller.scrollLeft <= 1;
+		atEnd = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 1;
+	}
+
+	$effect(() => {
+		if (!scroller) return;
+		updateEdges();
+		const ro = new ResizeObserver(updateEdges);
+		ro.observe(scroller);
+		return () => ro.disconnect();
+	});
 
 	function onpointerdown(e) {
 		dragging = true;
@@ -75,15 +88,16 @@
 				{onpointerup}
 				onpointercancel={onpointerup}
 				{onwheel}
+				onscroll={updateEdges}
 			>
 				{#each steps as x, i}
 					<div class="one brad_16 outline">
 						<div class="block bg_6 padding_24">
-							<div class="icon left bg_4 fc_2">
+							<div class="icon bg_4 fc_2">
 								{String(i + 1).padStart(2, '0')}
 							</div>
 							<h4 class="center margin_16">{x.title}</h4>
-							<p class="center margin_16">{x.text}</p>
+							<p class="center margin_8">{x.text}</p>
 						</div>
 
 						<img src="image/contact.jpg" alt="" draggable="false" />
@@ -91,17 +105,9 @@
 				{/each}
 			</div>
 
-			<div class="arrows">
-				<RoundButton icon="arrow-left" onclick={() => scroll(-1)} />
-				<RoundButton icon="arrow-right" onclick={() => scroll(1)} />
-			</div>
-
-			<div class="center margin_40">
-				<LinkArrow
-					onclick={() => {
-						module.open(QuotePopup);
-					}}>Request a Quote</LinkArrow
-				>
+			<div class="arrows row gap_16 center margin_24">
+				<RoundButton icon="arrow-left" disabled={atStart} onclick={() => scroll(-1)} />
+				<RoundButton icon="arrow-right" disabled={atEnd} onclick={() => scroll(1)} />
 			</div>
 		</div>
 	</section>
@@ -140,9 +146,11 @@
 	}
 
 	.arrows {
-		display: flex;
-		gap: 8px;
-		flex-shrink: 0;
+		--button-width_: 48px;
+		--button-height_: 48px;
+		--button-outline-color_: var(--ft2_dark);
+		--button-color_: var(--ft1_dark);
+		--button-color-hover_: var(--ft2_dark);
 	}
 
 	.one {
@@ -150,7 +158,6 @@
 
 		display: flex;
 		flex-direction: column;
-		/* aspect-ratio: 1/2; */
 
 		overflow: hidden;
 		flex: 0 0 100%;

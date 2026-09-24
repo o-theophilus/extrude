@@ -1,6 +1,5 @@
 <script>
 	import { Button } from '$lib/button';
-	import { Icon } from '$lib/macro';
 	import { module } from '$lib/store.svelte.js';
 	import QuotePopup from './quote.popup.svelte';
 
@@ -41,7 +40,7 @@
 <div class="bg margin_160">
 	<section id="what-we-print">
 		<div class="padding_5 grid_container">
-			<div class="grid_3 gap_24 margin_40">
+			<div class="grid_3 gap_8_16 margin_40">
 				<div class="title padding_64 brad_16 outline">
 					<h2>What can we print for you?</h2>
 					<p class="margin_16">
@@ -69,10 +68,7 @@
 					<div class="card brad_16">
 						<img src="image/contact.jpg" alt="" />
 						<div class="detail padding_24">
-							<!-- <div class="icon left bg_4 fc_2">
-								<Icon icon={x.icon} size="24" />
-							</div> -->
-							<h4 class="margin_16">{x.title}</h4>
+							<h5>{x.title}</h5>
 							<div class="hidden">
 								<p>{x.text}</p>
 							</div>
@@ -91,7 +87,7 @@
 	}
 
 	h2,
-	h4 {
+	h5 {
 		color: var(--ft1_dark);
 	}
 
@@ -110,6 +106,8 @@
 			width: 100%;
 			aspect-ratio: 1;
 			object-fit: cover;
+			width: 100%;
+			height: 100%;
 		}
 
 		.detail {
@@ -124,15 +122,20 @@
 			grid-template-rows: 0fr;
 			transition: grid-template 0.2s ease-in-out;
 			line-height: 0;
-
+			
 			p {
 				overflow: hidden;
+				margin: 0;
+				transition: margin 0.2s ease-in-out;
 			}
 		}
 
 		&:hover {
 			.hidden {
 				grid-template-rows: 1fr;
+				p {
+					margin-top: 8px;
+				}
 			}
 		}
 	}

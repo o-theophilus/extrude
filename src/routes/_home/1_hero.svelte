@@ -23,7 +23,7 @@
 	];
 </script>
 
-<section class="grid_container margin_80">
+<section class="grid_container margin_40">
 	<h1>
 		Turn your ideas into <span class="fc_1">something you can hold.</span>
 	</h1>
@@ -100,7 +100,7 @@
 	.cards {
 		display: flex;
 		flex-direction: column;
-		gap: 40px;
+		gap: 24px 40px;
 
 		.card {
 			display: flex;

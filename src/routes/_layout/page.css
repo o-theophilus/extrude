@@ -15,6 +15,10 @@
 
 
 	/************************ margin */
+	.margin_8 {
+		margin-top: 8px;
+	}
+
 	.margin_16 {
 		margin-top: 16px;
 	}
@@ -66,8 +70,18 @@
 		gap: 16px;
 	}
 
+
 	.gap_24 {
 		gap: 24px;
+	}
+
+	.gap_8_16 {
+		gap: 8px;
+
+		@container (min-width:600px) {
+			gap: 16px;
+		}
+
 	}
 
 	.gap_40 {
