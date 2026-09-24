@@ -29,7 +29,7 @@
 	];
 </script>
 
-<section>
+
 	<div class="bg margin_160">
 		<section>
 			<div id="materials" class="margin_160 grid_container">
@@ -48,7 +48,7 @@
 					{/each}
 				</div>
 
-				<div class="grid_3 gap_16 margin_40">
+				<div class="grid_4_b gap_16 margin_40">
 					{#each capabilities as x}
 						<div class="tile bg_6 outline brad_16 padding_24 center">
 							<div class="icon bg_4 fc_2">
@@ -62,4 +62,4 @@
 			</div>
 		</section>
 	</div>
-</section>
+
