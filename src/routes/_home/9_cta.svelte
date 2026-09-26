@@ -1,7 +1,7 @@
 <script>
 	import { Button } from '$lib/button';
 	import { module } from '$lib/store.svelte.js';
-	import QuotePopup from './quote.popup.svelte';
+	import ContactForm from './contact.svelte';
 </script>
 
 <section>
@@ -20,7 +20,7 @@
 				--button-outline-color="transparent"
 				icon2="arrow-right"
 				onclick={() => {
-					module.open(QuotePopup);
+					module.open(ContactForm);
 				}}
 			>
 				Request a Quote

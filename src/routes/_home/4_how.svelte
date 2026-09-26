@@ -1,5 +1,7 @@
 <script>
-	import { RoundButton } from '$lib/button';
+	import { Button, RoundButton } from '$lib/button';
+	import { module } from '$lib/store.svelte.js';
+	import ContactForm from './contact.svelte';
 
 	let steps = [
 		{
@@ -108,6 +110,21 @@
 			<div class="arrows row gap_16 center margin_24">
 				<RoundButton icon="arrow-left" disabled={atStart} onclick={() => scroll(-1)} />
 				<RoundButton icon="arrow-right" disabled={atEnd} onclick={() => scroll(1)} />
+			</div>
+
+			<div class="margin_80 center">
+				<Button
+					--button-background-color="var(--cta)"
+					--button-background-color-hover="var(--cta_)"
+					--button-color="white"
+					--button-outline-color="transparent"
+					icon2="arrow-right"
+					onclick={() => {
+						module.open(ContactForm);
+					}}
+				>
+					Get Started
+				</Button>
 			</div>
 		</div>
 	</section>

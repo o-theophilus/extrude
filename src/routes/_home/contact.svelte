@@ -1,9 +1,7 @@
 <script>
 	import { Button } from '$lib/button';
 	import { IG } from '$lib/input';
-	import { Icon } from '$lib/macro';
-	import { module } from '$lib/store.svelte.js';
-	import { waLink } from '$lib/whatsapp.js';
+	import { Form } from '$lib/layout';
 
 	let printTypes = [
 		'Custom product',
@@ -25,23 +23,18 @@
 		description: ''
 	});
 
-	let fileName = $state('');
+	const text = $derived(`Hi Extrude, I'd like a quote for a print.
 
-	const buildMessage = () => `Hi Extrude, I'd like a quote for a print.
-
+\n\n
 What are you looking to print? ${answers.printType}
+\n\n
 Do you have a 3D file? ${answers.hasFile}
+\n\n
 How many do you need? ${answers.quantity}
+\n\n
 When do you need it? ${answers.timeline}
 
-Project details: ${answers.description || '—'}${
-		fileName ? `\n\nI also have a reference file (${fileName}) to share here in the chat.` : ''
-	}`;
-
-	const submit = () => {
-		window.open(waLink(buildMessage()), '_blank', 'noopener,noreferrer');
-		module.close();
-	};
+Project details: ${answers.description || '—'}`);
 </script>
 
 {#snippet choice(label, options, key)}
@@ -63,12 +56,7 @@ Project details: ${answers.description || '—'}${
 	</IG>
 {/snippet}
 
-<div class="popup_head">
-	<h4>Request a Quote</h4>
-	<p class="margin_16">Tell us a little about what you'd like us to print.</p>
-</div>
-
-<div class="popup_body">
+<Form title="Request a Quote" description="Tell us a little about what you'd like us to print.">
 	{@render choice('What are you looking to print?', printTypes, 'printType')}
 	{@render choice('Do you have a 3D file?', fileOptions, 'hasFile')}
 	{@render choice('How many do you need?', quantityOptions, 'quantity')}
@@ -81,20 +69,6 @@ Project details: ${answers.description || '—'}${
 		placeholder="Describe what you want us to print..."
 	/>
 
-	<IG name="Add a file or photo">
-		{#snippet input(id)}
-			<label class="file">
-				<Icon icon="images" size="16" />
-				{fileName || 'Optional. Upload a 3D file, reference image, sketch or photo.'}
-				<input
-					{id}
-					type="file"
-					onchange={(e) => (fileName = e.currentTarget.files?.[0]?.name || '')}
-				/>
-			</label>
-		{/snippet}
-	</IG>
-
 	<Button
 		--button-width="100%"
 		--button-background-color="var(--cl3)"
@@ -102,7 +76,8 @@ Project details: ${answers.description || '—'}${
 		--button-color="white"
 		--button-outline-color="transparent"
 		icon2="arrow-up-right"
-		onclick={submit}
+		href="https://wa.me/2347077033699?text={text}"
+		target="_blank"
 	>
 		Continue to WhatsApp
 	</Button>
@@ -110,18 +85,9 @@ Project details: ${answers.description || '—'}${
 	<p class="note">
 		Your answers will be added to your WhatsApp message so we can understand your request faster.
 	</p>
-</div>
+</Form>
 
 <style>
-	.popup_head {
-		padding: 24px 24px 0 24px;
-	}
-	.popup_body {
-		padding: 24px;
-		max-height: 70vh;
-		overflow-y: auto;
-	}
-
 	.choices {
 		display: flex;
 		flex-wrap: wrap;
@@ -153,39 +119,6 @@ Project details: ${answers.description || '—'}${
 		background-color: var(--cl1);
 		outline-color: transparent;
 		color: white;
-	}
-
-	.file {
-		position: relative;
-		display: flex;
-		align-items: center;
-		gap: 8px;
-
-		width: 100%;
-		min-height: 48px;
-		padding: 0 16px;
-		border-radius: 4px;
-		outline: 1px solid var(--input);
-		outline-offset: -1px;
-		background-color: var(--input);
-
-		font-size: 0.8rem;
-		color: var(--ft2);
-		cursor: pointer;
-
-		transition: outline-color 0.2s ease-in-out;
-	}
-
-	.file:hover {
-		outline-color: var(--ft1);
-		color: var(--ft1);
-	}
-
-	.file input {
-		position: absolute;
-		inset: 0;
-		opacity: 0;
-		cursor: pointer;
 	}
 
 	.note {

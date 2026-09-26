@@ -47,7 +47,7 @@
 				{/each}
 			</div>
 
-			<div class="grid_4_b gap_16 margin_40">
+			<div class="grid grid_4_b gap_8 margin_40">
 				{#each capabilities as x}
 					<div class="tile bg_6 outline brad_16 padding_24 center">
 						<div class="icon bg_4 fc_2 center">
@@ -77,6 +77,12 @@
 		@container (min-width:480px) {
 			align-items: center;
 			flex-direction: row;
+		}
+	}
+
+	.grid {
+		@container (min-width:600px) {
+			gap: 16px;
 		}
 	}
 </style>

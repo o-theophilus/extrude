@@ -41,7 +41,7 @@
 							<Icon icon={x.icon} size="24" />
 						</div>
 						<h4 class="margin_16">{x.title}</h4>
-						<p class="margin_16">{x.text}</p>
+						<p class="margin_8">{x.text}</p>
 					</div>
 				{/each}
 			</div>

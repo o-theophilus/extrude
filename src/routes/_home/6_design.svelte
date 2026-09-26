@@ -1,7 +1,7 @@
 <script>
 	import { LinkArrow } from '$lib/button';
 	import { Icon } from '$lib/macro';
-	import { waLink } from '$lib/whatsapp.js';
+	import { whatsapp } from '$lib/store.svelte.js';
 </script>
 
 <div class="bg margin_160">
@@ -24,9 +24,7 @@
 
 					<div class="margin_24">
 						<LinkArrow
-							href={waLink(
-								"Hi Extrude, I'd like help turning a photo/sketch/idea into a 3D model."
-							)}
+							href="https://wa.me/{whatsapp}?text=Hi Extrude, I'd like help turning a photo/sketch/idea into a 3D model."
 							blank
 						>
 							Ask About Modelling

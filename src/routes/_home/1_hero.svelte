@@ -2,7 +2,7 @@
 	import { Button } from '$lib/button';
 	import { Icon } from '$lib/macro';
 	import { module } from '$lib/store.svelte.js';
-	import QuotePopup from './quote.popup.svelte';
+	import ContactForm from './contact.svelte';
 
 	const hero = [
 		{
@@ -42,9 +42,7 @@
 					--button-color="white"
 					--button-outline-color="transparent"
 					icon2="arrow-right"
-					onclick={() => {
-						module.open(QuotePopup);
-					}}
+					onclick={() => module.open(ContactForm)}
 				>
 					Request a Quote
 				</Button>
@@ -66,7 +64,7 @@
 				</div>
 				<div class="text">
 					<h4>{x.title}</h4>
-					<p class="margin_16">{x.text}</p>
+					<p class="margin_8">{x.text}</p>
 				</div>
 			</div>
 		{/each}

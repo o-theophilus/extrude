@@ -3,7 +3,7 @@
 	import { Marked } from '$lib/macro';
 	import { module } from '$lib/store.svelte.js';
 
-	import { content } from './legal.terms.js';
+	import { content } from './terms.js';
 </script>
 
 <div class="popup">

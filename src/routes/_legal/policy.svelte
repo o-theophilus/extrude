@@ -3,7 +3,7 @@
 	import { Icon, Marked } from '$lib/macro';
 	import { module } from '$lib/store.svelte.js';
 
-	import { cookiesPolicy, privacyPolicy } from './legal.policy.js';
+	import { cookiesPolicy, privacyPolicy } from './policy.js';
 </script>
 
 <div class="popup">

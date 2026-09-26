@@ -1,3 +1,5 @@
+export let whatsapp = "2347077033699"
+
 export let module = $state({
 	module: null,
 	value: {},

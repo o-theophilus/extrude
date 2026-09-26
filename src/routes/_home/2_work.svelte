@@ -1,7 +1,7 @@
 <script>
 	import { Button } from '$lib/button';
 	import { module } from '$lib/store.svelte.js';
-	import QuotePopup from './quote.popup.svelte';
+	import ContactForm from './contact.svelte';
 
 	const whatWePrint = [
 		{
@@ -40,15 +40,15 @@
 <div class="bg margin_160">
 	<section id="what-we-print">
 		<div class="padding_5 grid_container">
-			<div class="grid_3 gap_8_16 margin_40">
-				<div class="title padding_64 brad_16 outline">
+			<div class="grid grid_3 gap_8 margin_40">
+				<div class="title padding_40 brad_16 outline">
 					<h2>What can we print for you?</h2>
-					<p class="margin_16">
+					<p class="margin_8">
 						From useful everyday parts to custom pieces made for your brand, 3D printing makes it
 						possible to create exactly what you need.
 					</p>
 
-					<div class="margin_24">
+					<div class="margin_40">
 						<Button
 							--button-background-color="var(--cta)"
 							--button-background-color-hover="var(--cta_)"
@@ -56,7 +56,7 @@
 							--button-outline-color="transparent"
 							icon2="arrow-right"
 							onclick={() => {
-								module.open(QuotePopup);
+								module.open(ContactForm);
 							}}
 						>
 							Request a Quote
@@ -94,6 +94,16 @@
 	.title {
 		grid-column: span 2;
 		align-content: center;
+
+		@container (min-width:600px) {
+			padding: 64px;
+		}
+	}
+
+	.grid {
+		@container (min-width:600px) {
+			gap: 16px;
+		}
 	}
 
 	.card {
@@ -122,7 +132,7 @@
 			grid-template-rows: 0fr;
 			transition: grid-template 0.2s ease-in-out;
 			line-height: 0;
-			
+
 			p {
 				overflow: hidden;
 				margin: 0;

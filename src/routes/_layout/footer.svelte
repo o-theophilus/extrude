@@ -1,5 +1,6 @@
 <script>
 	import { Content } from '$lib/layout';
+	import Contact from './footer.contact.svelte';
 	import Nav from './footer.nav.svelte';
 	import Socials from './footer.socials.svelte';
 </script>
@@ -18,17 +19,17 @@
 						<img src="/logo.png" alt="logo" />
 						Extrude
 					</a>
-					<span class="tiny"> Custom 3D printing and physical products. </span>
-					<span class="tiny">Lagos, Nigeria</span>
-					<a class="email" href="mailto:hello@extrude.ng">hello@extrude.ng</a>
+					<span class="tiny"> Custom 3D print. </span>
 				</div>
 				<Socials />
+				<Contact />
 			</div>
-
-			<Nav />
 		</footer>
 
-		<div class="copyright tiny">Copyright &copy 2026 | Extrude. All rights reserved.</div>
+		<div class="copyright">
+			<p class="font_08">&copy 2026 | Extrude. All rights reserved.</p>
+			<Nav />
+		</div>
 	</Content>
 </div>
 
@@ -50,11 +51,11 @@
 	}
 
 	.left {
-		 .logo {
+		.logo {
 			margin-bottom: 16px;
 		}
 
-		 a {
+		a {
 			display: flex;
 			align-items: center;
 			gap: 8px;
@@ -75,25 +76,13 @@
 		}
 	}
 
-	.tiny {
-		display: block;
-		font-size: 0.8rem;
-		text-align: center;
-	}
-
-	.email {
-		display: block;
-		margin-top: 8px;
-		font-size: 0.8rem;
-		color: var(--ft2);
-		text-decoration: none;
-
-		&:hover {
-			color: var(--ft1);
-		}
-	}
-
 	.copyright {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0 16px;
+		justify-content: space-between;
+
 		border-top: 1px solid var(--ol);
 		margin-top: 40px;
 		padding-top: 40px;

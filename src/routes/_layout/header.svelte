@@ -20,7 +20,7 @@
 
 		color: var(--ft1);
 		font-weight: 800;
-		font-size: 1.4rem;
+		font-size: 24px;
 	}
 
 	img {

@@ -1,8 +1,8 @@
 <script>
-	import { LinkArrow } from '$lib/button';
+	import { Button } from '$lib/button';
 	import { Icon } from '$lib/macro';
 	import { module } from '$lib/store.svelte.js';
-	import QuotePopup from './quote.popup.svelte';
+	import ContactForm from './contact.svelte';
 
 	let pricingFactors = [
 		{
@@ -48,21 +48,29 @@
 							<Icon icon={x.icon} size="24" />
 						</div>
 						<h4 class="margin_16">{x.title}</h4>
-						<p class="margin_16">{x.text}</p>
+						<p class="margin_8">{x.text}</p>
 					</div>
 				{/each}
 			</div>
 
 			<div class="margin_40">
-				<LinkArrow
+				<Button
+					--button-background-color="var(--cta)"
+					--button-background-color-hover="var(--cta_)"
+					--button-color="white"
+					--button-outline-color="transparent"
+					icon2="arrow-right"
 					onclick={() => {
-						module.open(QuotePopup);
-					}}>Request a Quote</LinkArrow
+						module.open(ContactForm);
+					}}
 				>
-				<p class="margin_16 font_08">
-					Send us the details and we'll give you a clear price for your specific job.
-				</p>
+					Request a Quote
+				</Button>
 			</div>
+
+			<p class="margin_16 font_08">
+				Send us the details and we'll give you a clear price for your specific job.
+			</p>
 		</div>
 	</section>
 </div>

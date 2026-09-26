@@ -7,5 +7,5 @@ export { default as Design } from './6_design.svelte';
 export { default as Print } from './7_print.svelte';
 export { default as FAQ } from './8_faq.svelte';
 export { default as CTA } from './9_cta.svelte';
-export { default as QuotePopup } from './quote.popup.svelte';
+export { default as ContactForm } from './contact.svelte';
 

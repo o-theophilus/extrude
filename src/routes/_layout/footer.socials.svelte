@@ -1,10 +1,8 @@
 <script>
 	import { Icon } from '$lib/macro';
-	import { waLink } from '$lib/whatsapp.js';
+	import { whatsapp } from '$lib/store.svelte.js';
 
-	// Instagram/TikTok are placeholders — swap in the real profile links.
 	let platforms = [
-		{ name: 'whatsapp', href: waLink('Hi Extrude, I have a question.') },
 		{ name: 'instagram', href: '/' },
 		{ name: 'tiktok', href: '/' }
 	];

@@ -8,8 +8,11 @@
 
 <main id="page_top">
 	<Header />
-	{@render children()}
-	<Footer />
+	<div class="page_css">
+
+		{@render children()}
+		<Footer />
+	</div>
 	<Module />
 </main>
 

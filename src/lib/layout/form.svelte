@@ -4,8 +4,8 @@
 </script>
 
 <form onsubmit={(e) => e.preventDefault()} novalidate autocomplete="off">
-	<div class="page_title">{title}</div>
-	<div class="page_desc">{@html description}</div>
+	<h4 class="page_title">{title}</h4>
+	<p class="page_desc">{@html description}</p>
 
 	<Note note={error} status="400" --note-margin-top="16px"></Note>
 	{@render children()}
