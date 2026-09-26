@@ -56,15 +56,17 @@
 	let ops = $state({ open: null });
 </script>
 
-<section>
-	<div id="faq" class="margin_160">
-		<h2 class="center">Questions? We've got answers.</h2>
-		<div class="margin_40">
-			{#each faqs as x}
-				{#if x.category == 'General'}
-					<FAQGroup bind:ops category={x}></FAQGroup>
-				{/if}
-			{/each}
+<div class="bg_6">
+	<section>
+		<div id="faq" class="padding_5">
+			<h2 class="center">Questions? We've got answers.</h2>
+			<div class="margin_40">
+				{#each faqs as x}
+					{#if x.category == 'General'}
+						<FAQGroup bind:ops category={x}></FAQGroup>
+					{/if}
+				{/each}
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</div>

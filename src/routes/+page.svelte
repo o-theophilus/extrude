@@ -13,9 +13,7 @@
 <Why></Why>
 <How></How>
 <Spec></Spec>
-<Design></Design>
 <Print></Print>
+<Design></Design>
 <FAQ></FAQ>
 <CTA></CTA>
-
-<div class="margin_80"></div>

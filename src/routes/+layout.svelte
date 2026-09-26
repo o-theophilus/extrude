@@ -6,10 +6,9 @@
 	let { children } = $props();
 </script>
 
-<main id="page_top">
+<main>
 	<Header />
 	<div class="page_css">
-
 		{@render children()}
 		<Footer />
 	</div>
@@ -19,11 +18,5 @@
 <style>
 	main {
 		position: relative;
-
-		background-color: var(--bg1);
-		color: var(--ft2);
-		transition:
-			background-color 0.2s ease-in-out,
-			color 0.2s ease-in-out;
 	}
 </style>

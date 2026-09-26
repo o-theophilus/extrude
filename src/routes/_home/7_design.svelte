@@ -1,16 +1,15 @@
 <script>
 	import { LinkArrow } from '$lib/button';
-	import { Icon } from '$lib/macro';
 	import { whatsapp } from '$lib/store.svelte.js';
 </script>
 
-<div class="bg margin_160">
+<div class="bg_1 light">
 	<section>
 		<div class="padding_5 grid_container">
 			<div class="grid_2_1000 gap_80">
 				<div class="design_left">
 					<h2>No 3D file? No problem.</h2>
-					<p class="margin_24">
+					<p class="margin_24 max_text">
 						You don't need to know how to model in 3D to get something printed. Send us a photo,
 						sketch or description and we'll let you know what can be done.
 					</p>
@@ -32,25 +31,21 @@
 					</div>
 				</div>
 
-				<div class="design_right bg_2 outline brad_16">
-					<Icon icon="pencil-ruler" size="64" />
-				</div>
+				<img src="image/model.jpg" alt="3d modelling" class="brad_16" />
 			</div>
 		</div>
 	</section>
 </div>
 
 <style>
-	.bg {
-		background-color: hsl(173, 68%, 79%);
-	}
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 4/3;
 
-	.design_right {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		min-height: 240px;
-		color: var(--cl1);
+		@container (min-width: 1000px) {
+			/* aspect-ratio: 1; */
+		}
 	}
 </style>

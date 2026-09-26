@@ -29,16 +29,16 @@
 	];
 </script>
 
-<div class="bg margin_160">
+<div class="bg_5 dark">
 	<section>
-		<div id="materials" class="margin_160 grid_container">
+		<div id="materials" class="padding_5 grid_container">
 			<h2 class="max_text">The right material for the job.</h2>
-			<p class="max_text margin_16">
+			<p class="max_text margin_16 font_14">
 				Different projects need different properties. We offer a selection of materials and colours
 				to suit the way your print will look and be used.
 			</p>
 
-			<div class="spec margin_40">
+			<div class="spec margin_60">
 				{#each materials as x}
 					<div class="one">
 						<h4>{x.name}</h4>
@@ -49,7 +49,7 @@
 
 			<div class="grid grid_4_b gap_8 margin_40">
 				{#each capabilities as x}
-					<div class="tile bg_6 outline brad_16 padding_24 center">
+					<div class="card outline brad_16 padding_24 center">
 						<div class="icon bg_4 fc_2 center">
 							<Icon icon={x.icon} size="24" />
 						</div>
@@ -64,7 +64,7 @@
 
 <style>
 	.one {
-		border-top: solid 1px var(--ol);
+		border-top: solid 1px hsl(0, 0%, 20%);
 		padding: 16px 0;
 		display: flex;
 		flex-direction: column;
@@ -82,7 +82,11 @@
 
 	.grid {
 		@container (min-width:600px) {
-			gap: 16px;
+			gap: 16px !important;
 		}
+	}
+
+	.card {
+		background-color: #202127;
 	}
 </style>

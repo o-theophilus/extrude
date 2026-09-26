@@ -3,7 +3,7 @@
 
 <div class="page_css">
 	<section>
-		<div class="logo">
+		<div class="logo f1">
 			<img src="/logo.png" alt="logo" />
 			Extrude
 		</div>
@@ -18,7 +18,6 @@
 
 		padding: 40px 0;
 
-		color: var(--ft1);
 		font-weight: 800;
 		font-size: 24px;
 	}

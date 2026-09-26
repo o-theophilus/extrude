@@ -1,28 +1,60 @@
 <script>
-	import { Button, RoundButton } from '$lib/button';
+	import {
+		ArrowLeft,
+		ArrowRight,
+		createIcons,
+		MessageCircle,
+		Package,
+		Printer,
+		ReceiptText
+	} from 'lucide';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		createIcons({
+			icons: {
+				MessageCircle,
+				ReceiptText,
+				Printer,
+				ArrowLeft,
+				ArrowRight,
+				Package
+			},
+			attrs: {
+				'stroke-width': 2.5
+			},
+			nameAttr: 'icon'
+		});
+	});
+
+	import { Button } from '$lib/button';
 	import { module } from '$lib/store.svelte.js';
 	import ContactForm from './contact.svelte';
 
 	let steps = [
 		{
+			icon: 'message-circle',
 			title: 'Tell us what you need',
 			text: 'Send us your 3D file, photo, sketch or simply describe what you have in mind.',
-			icon: 'message-circle'
+			img: 'image/how.1.jpg'
 		},
 		{
+			icon: 'receipt-text',
 			title: 'Get your quote',
-			text: "We'll review the requirements and send you a price and estimated turnaround.",
-			icon: 'receipt-text'
+			text: "We'll review your requirements and send you a price and estimated turnaround time.",
+			img: 'image/how.2.jpg'
 		},
 		{
+			icon: 'printer',
 			title: 'We print',
-			text: 'Once everything is approved, your print goes into production.',
-			icon: 'printer'
+			text: 'Once you approve the quote, we prepare your design and put your print into production.',
+			img: 'image/how.3.jpg'
 		},
 		{
+			icon: 'package',
 			title: 'Collect or receive',
-			text: 'Pick up your finished print or have it delivered to you.',
-			icon: 'package'
+			text: 'Pick up your finished print or have it delivered straight to you.',
+			img: 'image/how.4.jpg'
 		}
 	];
 
@@ -76,7 +108,7 @@
 	}
 </script>
 
-<div class="bg">
+<div class="light bg_6">
 	<section>
 		<div id="how-it-works" class="padding_5 grid_container">
 			<h2 class="center">From idea to finished piece.</h2>
@@ -93,23 +125,31 @@
 				onscroll={updateEdges}
 			>
 				{#each steps as x, i}
-					<div class="one brad_16 outline">
-						<div class="block bg_6 padding_24">
-							<div class="icon bg_4 fc_2">
-								{String(i + 1).padStart(2, '0')}
+					<div class="one brad_16 outline shadow">
+						<div class="block bg_7 padding_24">
+							<div class="icon bg_4">
+								<h4 class="light">
+									{i + 1}
+								</h4>
 							</div>
 							<h4 class="center margin_16">{x.title}</h4>
 							<p class="center margin_8">{x.text}</p>
 						</div>
 
-						<img src="image/contact.jpg" alt="" draggable="false" />
+						<img src={x.img} alt="" draggable="false" />
 					</div>
 				{/each}
 			</div>
 
 			<div class="arrows row gap_16 center margin_24">
-				<RoundButton icon="arrow-left" disabled={atStart} onclick={() => scroll(-1)} />
-				<RoundButton icon="arrow-right" disabled={atEnd} onclick={() => scroll(1)} />
+				<button disabled={atStart} onclick={() => scroll(-1)}>
+					<svg class="lucide" icon="arrow-left"></svg>
+					.
+				</button>
+				<button disabled={atEnd} onclick={() => scroll(1)}>
+					<svg class="lucide" icon="arrow-right"></svg>
+					.
+				</button>
 			</div>
 
 			<div class="margin_80 center">
@@ -131,15 +171,6 @@
 </div>
 
 <style>
-	.bg {
-		background-color: hsl(0, 0%, 5%);
-		color: var(--ft2_dark);
-	}
-
-	h2 {
-		color: var(--ft1_dark);
-	}
-
 	.scroller {
 		display: flex;
 		gap: 40px;
@@ -163,11 +194,39 @@
 	}
 
 	.arrows {
-		--button-width_: 48px;
-		--button-height_: 48px;
-		--button-outline-color_: var(--ft2_dark);
+		--button-outline-color_: var(--line1);
 		--button-color_: var(--ft1_dark);
 		--button-color-hover_: var(--ft2_dark);
+
+		button {
+			all: unset;
+			cursor: pointer;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 52px;
+			height: 52px;
+			border-radius: 50%;
+			font-size: 0;
+			outline: 1px solid var(--line2);
+			color: var(--line2);
+
+			transition: color 0.2s ease-in-out;
+			transition: outline-color 0.2s ease-in-out;
+
+			&:hover {
+				outline-color: var(--line3);
+				color: var(--line3);
+			}
+			&:disabled {
+				opacity: 0.2;
+				pointer-events: none;
+			}
+
+			/* background-color: red; */
+		}
 	}
 
 	.one {

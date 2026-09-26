@@ -65,7 +65,7 @@
 		--card-outline-color: var(--ol);
 		--card-title-padding: 12px 16px;
 		--card-content-padding: 0 16px 16px 16px;
-		--card-background-color: var(--bg3);
+		--card-background-color: white;
 
 		& .q {
 			font-weight: 800;

@@ -23,7 +23,7 @@
 	];
 </script>
 
-<section class="grid_container margin_40">
+<section class="grid_container margin_40 light">
 	<h1>
 		Turn your ideas into <span class="fc_1">something you can hold.</span>
 	</h1>
@@ -59,7 +59,7 @@
 			{/if}
 
 			<div class="card">
-				<div class="icon left bg_4 fc_2">
+				<div class="icon left bg_4 f1_dark">
 					<Icon icon={x.icon} size="24" />
 				</div>
 				<div class="text">
@@ -108,7 +108,7 @@
 
 		.divider {
 			height: 1px;
-			background-color: var(--ol);
+			background-color: var(--line1);
 		}
 
 		@container (min-width: 330px) {

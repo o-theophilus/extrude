@@ -1,49 +1,40 @@
 <script>
 	import { Button } from '$lib/button';
 	import { module } from '$lib/store.svelte.js';
+	import One from './2_work.one.svelte';
 	import ContactForm from './contact.svelte';
 
 	const whatWePrint = [
 		{
-			icon: 'shapes',
-			title: 'Custom Products',
-			text: 'Personalised objects, décor, collectibles and one of a kind pieces.'
+			title: 'Custom & Personalised',
+			text: 'Unique objects, décor, gifts, collectibles and personalised pieces made to your specifications.',
+			imgs: ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp']
 		},
 		{
-			icon: 'award',
 			title: 'Business & Branding',
-			text: 'Awards, trophies, logo pieces, displays and branded objects.'
+			text: 'Branded displays, logo pieces, awards, promotional items and custom products for your business.',
+			imgs: ['2.webp', '3.webp', '4.webp', '5.webp']
 		},
 		{
-			icon: 'box',
-			title: 'Prototypes',
-			text: 'Bring product concepts to life and test ideas before moving into larger scale production.'
+			title: 'Prototypes & Models',
+			text: 'Turn ideas into physical models for testing, presentation, product development and validation.',
+			imgs: ['3.webp', '4.webp', '5.webp']
 		},
 		{
-			icon: 'wrench',
 			title: 'Functional Parts',
-			text: 'Brackets, mounts, enclosures, fixtures and replacement parts made for the job.'
-		},
-		{
-			icon: 'gift',
-			title: 'Gifts & Personalised Pieces',
-			text: 'Custom gifts and memorable pieces made for special people and occasions.'
-		},
-		{
-			icon: 'printer',
-			title: 'Custom Prints',
-			text: "Have a model already? Send it over and we'll handle the printing."
+			text: 'Practical brackets, mounts, enclosures, fixtures, replacement parts and other made to fit components.',
+			imgs: ['4.webp', '5.webp']
 		}
 	];
 </script>
 
-<div class="bg margin_160">
-	<section id="what-we-print">
-		<div class="padding_5 grid_container">
-			<div class="grid grid_3 gap_8 margin_40">
-				<div class="title padding_40 brad_16 outline">
+<div class="margin_160">
+	<section>
+		<div class="grid_container">
+			<div class="grid grid_3 gap_8">
+				<div class="title bg_2 dark padding_40 brad_16">
 					<h2>What can we print for you?</h2>
-					<p class="margin_8">
+					<p class="margin_8 font_14">
 						From useful everyday parts to custom pieces made for your brand, 3D printing makes it
 						possible to create exactly what you need.
 					</p>
@@ -64,16 +55,8 @@
 					</div>
 				</div>
 
-				{#each whatWePrint as x}
-					<div class="card brad_16">
-						<img src="image/contact.jpg" alt="" />
-						<div class="detail padding_24">
-							<h5>{x.title}</h5>
-							<div class="hidden">
-								<p>{x.text}</p>
-							</div>
-						</div>
-					</div>
+				{#each whatWePrint as one}
+					<One {one}></One>
 				{/each}
 			</div>
 		</div>
@@ -81,72 +64,18 @@
 </div>
 
 <style>
-	.bg {
-		background-color: #03253d;
-		color: var(--ft2_dark);
-	}
-
-	h2,
-	h5 {
-		color: var(--ft1_dark);
-	}
-
 	.title {
 		grid-column: span 2;
 		align-content: center;
 
-		@container (min-width:600px) {
-			padding: 64px;
+		@container (min-width: 600px) {
+			padding: 64px !important;
 		}
 	}
 
 	.grid {
-		@container (min-width:600px) {
-			gap: 16px;
-		}
-	}
-
-	.card {
-		position: relative;
-		overflow: hidden;
-		gap: 0;
-		line-height: 0;
-
-		img {
-			width: 100%;
-			aspect-ratio: 1;
-			object-fit: cover;
-			width: 100%;
-			height: 100%;
-		}
-
-		.detail {
-			position: absolute;
-			bottom: 0;
-
-			background-color: rgba(0, 0, 0, 0.6);
-		}
-
-		.hidden {
-			display: grid;
-			grid-template-rows: 0fr;
-			transition: grid-template 0.2s ease-in-out;
-			line-height: 0;
-
-			p {
-				overflow: hidden;
-				margin: 0;
-				transition: margin 0.2s ease-in-out;
-			}
-		}
-
-		&:hover {
-			.hidden {
-				grid-template-rows: 1fr;
-				p {
-					margin-top: 8px;
-				}
-			}
+		@container (min-width: 600px) {
+			gap: 16px !important;
 		}
 	}
 </style>

@@ -42,12 +42,7 @@ Project details: ${answers.description || '—'}`);
 		{#snippet input()}
 			<div class="choices">
 				{#each options as x}
-					<button
-						type="button"
-						class="choice"
-						class:active={answers[key] == x}
-						onclick={() => (answers[key] = x)}
-					>
+					<button class:active={answers[key] == x} onclick={() => (answers[key] = x)}>
 						{x}
 					</button>
 				{/each}
@@ -94,11 +89,11 @@ Project details: ${answers.description || '—'}`);
 		gap: 8px;
 	}
 
-	.choice {
+	button {
 		all: unset;
 		cursor: pointer;
 
-		padding: 8px 16px;
+		padding: 4px 16px;
 		border-radius: 100px;
 		font-size: 0.8rem;
 		outline: 1px solid var(--ol);
@@ -111,11 +106,11 @@ Project details: ${answers.description || '—'}`);
 			outline-color 0.2s ease-in-out;
 	}
 
-	.choice:hover {
+	button:hover {
 		color: var(--ft1);
 	}
 
-	.choice.active {
+	button.active {
 		background-color: var(--cl1);
 		outline-color: transparent;
 		color: white;

@@ -6,7 +6,7 @@
 	let { open = true, onclick, children, title } = $props();
 </script>
 
-<div class="card" class:open>
+<div class="card outline" class:open>
 	{#if title || onclick}
 		<div
 			class="title"
@@ -38,8 +38,6 @@
 		margin-top: var(--card-margin-top, 8px);
 		background-color: var(--card-background-color, var(--bg));
 		border-radius: 8px;
-		outline: 1px solid var(--card-outline-color, transparent);
-		outline-offset: -1px;
 		border-bottom: 1px solid var(--card-bottom-border-color, transparent);
 	}
 

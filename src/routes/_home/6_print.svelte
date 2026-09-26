@@ -33,7 +33,8 @@
 	];
 </script>
 
-<div class="bg">
+<div class="bg_2 dark">
+	<video src="/image/bg.mp4" autoplay muted loop playsinline></video>
 	<section id="what-we-print">
 		<div class="padding_5 grid_container">
 			<h2 class="max_text">Get a quote for your print.</h2>
@@ -76,9 +77,18 @@
 </div>
 
 <style>
-	.bg {
-		background-color: rgb(0, 61, 61);
-		color: var(--ft2_dark);
+	.bg_2 {
+		position: relative;
+		z-index: 0;
+	}
+
+	video {
+		opacity: 0.2;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	h2,

@@ -7,6 +7,7 @@
 
 <div class="block">
 	<Link onclick={() => module.open(Policy)}>Privacy Policy</Link>
+	•
 	<Link onclick={() => module.open(Terms)}>Terms of Service</Link>
 </div>
 
