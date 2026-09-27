@@ -8,22 +8,22 @@
 		{
 			title: 'Custom & Personalised',
 			text: 'Unique objects, décor, gifts, collectibles and personalised pieces made to your specifications.',
-			imgs: ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp']
+			imgs: ['a.1.webp', 'a.2.webp']
 		},
 		{
 			title: 'Business & Branding',
 			text: 'Branded displays, logo pieces, awards, promotional items and custom products for your business.',
-			imgs: ['2.webp', '3.webp', '4.webp', '5.webp']
+			imgs: ['b.1.webp']
 		},
 		{
 			title: 'Prototypes & Models',
 			text: 'Turn ideas into physical models for testing, presentation, product development and validation.',
-			imgs: ['3.webp', '4.webp', '5.webp']
+			imgs: ['c.1.webp', 'c.2.webp', 'c.3.webp']
 		},
 		{
 			title: 'Functional Parts',
 			text: 'Practical brackets, mounts, enclosures, fixtures, replacement parts and other made to fit components.',
-			imgs: ['4.webp', '5.webp']
+			imgs: ['d.1.webp', 'd.2.webp', 'd.3.webp', 'd.4.webp', 'd.5.webp', 'd.6.webp']
 		}
 	];
 </script>

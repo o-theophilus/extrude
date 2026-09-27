@@ -61,7 +61,7 @@
 		position: relative;
 	}
 	.content {
-		background-color: var(--bg);
+		background-color: white;
 		box-shadow: 0 0 10px 0 var(--input);
 		border-radius: 8px;
 

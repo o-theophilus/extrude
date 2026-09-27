@@ -8,7 +8,10 @@
 		<div class="padding_5 grid_container">
 			<div class="grid_2_1000 gap_80">
 				<div class="design_left">
-					<h2>No 3D file? No problem.</h2>
+					<h2>
+						No 3D file?<br /><span class="fc_1"> No problem </span>
+						.
+					</h2>
 					<p class="margin_24 max_text">
 						You don't need to know how to model in 3D to get something printed. Send us a photo,
 						sketch or description and we'll let you know what can be done.
@@ -31,7 +34,7 @@
 					</div>
 				</div>
 
-				<img src="image/model.jpg" alt="3d modelling" class="brad_16" />
+				<img src="image/design.webp" alt="3d modelling" class="brad_16" />
 			</div>
 		</div>
 	</section>

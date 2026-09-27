@@ -36,25 +36,25 @@
 			icon: 'message-circle',
 			title: 'Tell us what you need',
 			text: 'Send us your 3D file, photo, sketch or simply describe what you have in mind.',
-			img: 'image/how.1.jpg'
+			img: 'image/how.1.webp'
 		},
 		{
 			icon: 'receipt-text',
 			title: 'Get your quote',
 			text: "We'll review your requirements and send you a price and estimated turnaround time.",
-			img: 'image/how.2.jpg'
+			img: 'image/how.2.webp'
 		},
 		{
 			icon: 'printer',
 			title: 'We print',
 			text: 'Once you approve the quote, we prepare your design and put your print into production.',
-			img: 'image/how.3.jpg'
+			img: 'image/how.3.webp'
 		},
 		{
 			icon: 'package',
 			title: 'Collect or receive',
 			text: 'Pick up your finished print or have it delivered straight to you.',
-			img: 'image/how.4.jpg'
+			img: 'image/how.4.webp'
 		}
 	];
 

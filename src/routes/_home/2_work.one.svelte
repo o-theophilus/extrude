@@ -17,15 +17,17 @@
 				<p>{one.text}</p>
 
 				<div class="carousel">
-					{#each one.imgs as img}
-						<button
-							class="outline"
-							class:active={active == img}
-							onclick={() => {
-								active = img;
-							}}>.</button
-						>
-					{/each}
+					{#if one.imgs.length > 1}
+						{#each one.imgs as img}
+							<button
+								class="outline"
+								class:active={active == img}
+								onclick={() => {
+									active = img;
+								}}>.</button
+							>
+						{/each}
+					{/if}
 				</div>
 			</div>
 		</div>

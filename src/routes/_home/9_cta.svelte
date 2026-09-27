@@ -32,3 +32,9 @@
 		</div>
 	</section>
 </div>
+
+<style>
+	.bg_6 {
+		padding-bottom: 160px;
+	}
+</style>

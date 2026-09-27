@@ -1,42 +1,46 @@
 <script>
-	import { Content } from '$lib/layout';
 	import Contact from './footer.contact.svelte';
 	import Nav from './footer.nav.svelte';
 	import Socials from './footer.socials.svelte';
 </script>
 
-<div class="a">
-	<Content
-		--content-height="100%"
-		--content-padding-top="56px"
-		--content-padding-bottom="40px"
-		--content-background-color="var(--bg)"
-	>
-		<footer id="footer">
-			<div class="left">
-				<div class="logo">
-					<a href="/">
+<!-- --content-height="100%"
+--content-padding-top="56px"
+--content-padding-bottom="40px"
+--content-background-color="var(--bg)" -->
+
+<div class="section">
+	<section>
+		<div class="block">
+			<footer id="footer">
+				<div class="a">
+					<div class="logo">
 						<img src="/logo.png" alt="logo" />
 						Extrude
-					</a>
+					</div>
 					<span class="tiny"> Custom 3D print. </span>
 				</div>
 				<Socials />
 				<Contact />
-			</div>
-		</footer>
+			</footer>
 
-		<div class="copyright">
-			<p class="font_08">&copy 2026 | Extrude. All rights reserved.</p>
-			<Nav />
+			<div class="copyright">
+				<p class="font_08">&copy 2026 | Extrude. All rights reserved.</p>
+				<Nav />
+			</div>
 		</div>
-	</Content>
+	</section>
 </div>
 
 <style>
-	.a {
-		border-top: 1px solid var(--ol);
+	.section {
+		border-top: 1px solid var(--line1);
 	}
+	.block {
+		padding-top: 56px;
+		padding-bottom: 40px;
+	}
+
 	footer {
 		display: flex;
 		flex-direction: column;
@@ -50,24 +54,18 @@
 		}
 	}
 
-	.left {
-		.logo {
-			margin-bottom: 16px;
-		}
+	.logo {
+		margin-bottom: 16px;
 
-		a {
-			display: flex;
-			align-items: center;
-			gap: 8px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
 
-			width: fit-content;
-			color: var(--ft1);
-			fill: var(--cl1);
-			font-weight: 800;
-			text-decoration: none;
-
-			transition: color 0.2s ease-in-out;
-		}
+		width: fit-content;
+		color: var(--ft1);
+		fill: var(--cl1);
+		font-weight: 800;
+		text-decoration: none;
 
 		img {
 			width: 32px;
@@ -83,7 +81,7 @@
 		gap: 0 16px;
 		justify-content: space-between;
 
-		border-top: 1px solid var(--ol);
+		border-top: 1px solid var(--line1);
 		margin-top: 40px;
 		padding-top: 40px;
 	}
