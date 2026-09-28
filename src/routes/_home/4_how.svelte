@@ -64,10 +64,23 @@
 	let startScroll = 0;
 	let atStart = $state(true);
 	let atEnd = $state(false);
+	let settling = $state(false);
+	let settleTimer;
+
+	// distance from a card's center to the scroller's center
+	function offset(el) {
+		const box = scroller.getBoundingClientRect();
+		const r = el.getBoundingClientRect();
+		return r.left + r.width / 2 - (box.left + box.width / 2);
+	}
 
 	function updateEdges() {
-		atStart = scroller.scrollLeft <= 1;
-		atEnd = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 1;
+		const cards = scroller.querySelectorAll('.one');
+		if (!cards.length) return;
+
+		const maxScroll = scroller.scrollWidth - scroller.clientWidth;
+		atStart = scroller.scrollLeft <= 1 || offset(cards[0]) >= -1;
+		atEnd = scroller.scrollLeft >= maxScroll - 1 || offset(cards[cards.length - 1]) <= 1;
 	}
 
 	$effect(() => {
@@ -78,7 +91,14 @@
 		return () => ro.disconnect();
 	});
 
+	function endSettle() {
+		clearTimeout(settleTimer);
+		scroller.removeEventListener('scrollend', endSettle);
+		settling = false;
+	}
+
 	function onpointerdown(e) {
+		endSettle();
 		dragging = true;
 		pointerX = e.clientX;
 		startScroll = scroller.scrollLeft;
@@ -91,14 +111,21 @@
 	}
 
 	function onpointerup(e) {
+		if (!dragging) return;
 		dragging = false;
 		scroller.releasePointerCapture(e.pointerId);
-	}
 
-	function onwheel(e) {
-		if (Math.abs(e.deltaX) >= Math.abs(e.deltaY)) return;
-		e.preventDefault();
-		scroller.scrollLeft += e.deltaY;
+		// keep snapping off and glide to the nearest card, then re-enable snapping
+		const nearest = [...scroller.querySelectorAll('.one')].reduce((a, b) =>
+			Math.abs(offset(b)) < Math.abs(offset(a)) ? b : a
+		);
+		const delta = offset(nearest);
+		if (Math.abs(delta) < 1) return;
+
+		settling = true;
+		scroller.addEventListener('scrollend', endSettle);
+		settleTimer = setTimeout(endSettle, 800); // fallback where scrollend is unsupported
+		scroller.scrollBy({ left: delta, behavior: 'smooth' });
 	}
 
 	function scroll(dir) {
@@ -114,12 +141,12 @@
 	<div
 		class="scroller"
 		class:dragging
+		class:settling
 		bind:this={scroller}
 		{onpointerdown}
 		{onpointermove}
 		{onpointerup}
 		onpointercancel={onpointerup}
-		{onwheel}
 		onscroll={updateEdges}
 	>
 		{#each steps as x, i}
@@ -202,6 +229,9 @@
 			cursor: grabbing;
 			scroll-snap-type: none;
 			scroll-behavior: unset;
+		}
+		&.settling {
+			scroll-snap-type: none;
 		}
 	}
 

@@ -9,11 +9,10 @@
 			<div class="grid_2_1000 gap_80">
 				<div class="design_left">
 					<h2>
-						No 3D file?<br /><span class="fc_1"> No problem </span>
-						.
+						Don't have a 3D file?<br /><span class="fc_1"> That's okay. </span>
 					</h2>
 					<p class="margin_24 max_text">
-						You don't need to know how to model in 3D to get something printed. Send us a photo,
+						Have an idea but don't know how to turn it into a printable model? Send us a photo,
 						sketch or description and we'll let you know what can be done.
 					</p>
 

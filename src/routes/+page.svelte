@@ -1,6 +1,6 @@
 <script>
 	import { Meta } from '$lib/macro';
-	import { CTA, Design, FAQ, Hero, How, Print, Spec, Why, Work } from './_home';
+	import { CTA, FAQ, Hero, How, Model, Quote, Spec, Why, Work } from './_home';
 </script>
 
 <Meta
@@ -13,7 +13,7 @@
 <Why></Why>
 <How></How>
 <Spec></Spec>
-<Print></Print>
-<Design></Design>
+<Quote></Quote>
+<Model></Model>
 <FAQ></FAQ>
 <CTA></CTA>
