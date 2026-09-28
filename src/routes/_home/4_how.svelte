@@ -103,75 +103,73 @@
 
 	function scroll(dir) {
 		const card = scroller.querySelector('.one');
-		const step = card ? card.getBoundingClientRect().width + 40 : scroller.clientWidth;
+		const step = card.getBoundingClientRect().width + 40;
 		scroller.scrollBy({ left: dir * step, behavior: 'smooth' });
 	}
 </script>
 
-<div class="light bg_6">
-	<section>
-		<div id="how-it-works" class="padding_5 grid_container">
-			<h2 class="center">From idea to finished piece.</h2>
+<div class="light bg_6 padding_5 grid_container">
+	<h2 class="center">From idea to finished piece.</h2>
 
-			<div
-				class="margin_40 scroller"
-				class:dragging
-				bind:this={scroller}
-				{onpointerdown}
-				{onpointermove}
-				{onpointerup}
-				onpointercancel={onpointerup}
-				{onwheel}
-				onscroll={updateEdges}
-			>
-				{#each steps as x, i}
-					<div class="one brad_16 outline shadow">
-						<div class="block bg_7 padding_24">
-							<div class="icon bg_4">
-								<h4 class="light">
-									{i + 1}
-								</h4>
-							</div>
-							<h4 class="center margin_16">{x.title}</h4>
-							<p class="center margin_8">{x.text}</p>
-						</div>
-
-						<img src={x.img} alt="" draggable="false" />
+	<div
+		class="scroller"
+		class:dragging
+		bind:this={scroller}
+		{onpointerdown}
+		{onpointermove}
+		{onpointerup}
+		onpointercancel={onpointerup}
+		{onwheel}
+		onscroll={updateEdges}
+	>
+		{#each steps as x, i}
+			<div class="one brad_16 outline shadow">
+				<div class="block bg_7 padding_24">
+					<div class="icon bg_4">
+						<h4 class="light">
+							{i + 1}
+						</h4>
 					</div>
-				{/each}
-			</div>
+					<h4 class="center margin_16">{x.title}</h4>
+					<p class="center margin_8">{x.text}</p>
+				</div>
 
-			<div class="arrows row gap_16 center margin_24">
-				<button disabled={atStart} onclick={() => scroll(-1)}>
-					<svg class="lucide" icon="arrow-left"></svg>
-					.
-				</button>
-				<button disabled={atEnd} onclick={() => scroll(1)}>
-					<svg class="lucide" icon="arrow-right"></svg>
-					.
-				</button>
+				<img src={x.img} alt="" draggable="false" />
 			</div>
+		{/each}
+	</div>
 
-			<div class="margin_80 center">
-				<Button
-					--button-background-color="var(--cta)"
-					--button-background-color-hover="var(--cta_)"
-					--button-color="white"
-					--button-outline-color="transparent"
-					icon2="arrow-right"
-					onclick={() => {
-						module.open(ContactForm);
-					}}
-				>
-					Get Started
-				</Button>
-			</div>
-		</div>
-	</section>
+	<div class="arrows row gap_16 center">
+		<button disabled={atStart} onclick={() => scroll(-1)}>
+			<svg class="lucide" icon="arrow-left"></svg>
+			.
+		</button>
+		<button disabled={atEnd} onclick={() => scroll(1)}>
+			<svg class="lucide" icon="arrow-right"></svg>
+			.
+		</button>
+	</div>
+
+	<div class="margin_80 center">
+		<Button
+			--button-background-color="var(--cta)"
+			--button-background-color-hover="var(--cta_)"
+			--button-color="white"
+			--button-outline-color="transparent"
+			icon2="arrow-right"
+			onclick={() => {
+				module.open(ContactForm);
+			}}
+		>
+			Get Started
+		</Button>
+	</div>
 </div>
 
 <style>
 	.scroller {
+		--size: 800px;
+
 		display: flex;
 		gap: 40px;
 
@@ -181,6 +179,20 @@
 		cursor: grab;
 		touch-action: pan-y;
 		user-select: none;
+
+		padding-top: 40px;
+		padding-bottom: 24px;
+
+		padding-left: 16px;
+		padding-right: 16px;
+		@media screen and (min-width: 580px) {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+		@container (min-width: 880px) {
+			padding-left: calc((100vw - var(--size)) / 2);
+			padding-right: calc((100vw - var(--size)) / 2);
+		}
 
 		&::-webkit-scrollbar {
 			display: none;
@@ -230,13 +242,15 @@
 	}
 
 	.one {
-		--size: 400px;
-
 		display: flex;
 		flex-direction: column;
 
 		overflow: hidden;
 		flex: 0 0 100%;
+
+		outline-color: var(--line1);
+
+		scroll-snap-align: center;
 
 		@container (min-width: 400px) {
 			flex-direction: row;
@@ -244,10 +258,8 @@
 		}
 
 		@container (min-width: 880px) {
-			flex: 0 0 calc(var(--size) * 2);
+			flex: 0 0 calc(var(--size));
 		}
-
-		scroll-snap-align: center;
 
 		.block {
 			width: 100%;

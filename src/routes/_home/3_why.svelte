@@ -28,7 +28,7 @@
 <div class="bg_1 light margin_160">
 	<section>
 		<div class="padding_5 grid_container">
-			<h2 class="max_text">Make what you need, when you need it.</h2>
+			<h2 class="max_text">Build without the usual constraints.</h2>
 			<p class="max_text margin_16 font_14">
 				3D printing gives you the freedom to create without committing to expensive tooling or large
 				production runs.
