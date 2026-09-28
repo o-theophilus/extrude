@@ -1,5 +1,6 @@
 export { default as Hero } from './1_hero.svelte';
 export { default as Work } from './2_work.svelte';
+export { default as Metrics } from './3_metrics.svelte';
 export { default as Why } from './3_why.svelte';
 export { default as How } from './4_how.svelte';
 export { default as Spec } from './5_spec.svelte';
