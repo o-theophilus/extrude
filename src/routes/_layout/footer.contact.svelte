@@ -4,7 +4,7 @@
 </script>
 
 <div class="contact">
-	<a href="https://wa.me/{whatsapp}?text=Hello Meji" target="_blank" class="card">
+	<a href="https://wa.me/{whatsapp}?text=Hello Extrude" target="_blank" class="card">
 		<div class="icon">
 			<Icon icon="whatsapp" size="24"></Icon>
 		</div>
@@ -23,7 +23,7 @@
 			<Icon icon="mail" size="24"></Icon>
 		</div>
 		<div class="label">Email</div>
-		<div class="value">theophilus.ogbolu@gmail.com.ng</div>
+		<div class="value">admin@meji.ng</div>
 	</a>
 </div>
 

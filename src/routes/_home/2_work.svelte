@@ -33,7 +33,7 @@
 		<div class="grid_container">
 			<div class="grid grid_3 gap_8">
 				<div class="title bg_2 dark padding_40 brad_16">
-					<h2>What can we print for you?</h2>
+					<h2>Our 3D Printing Services</h2>
 					<p class="margin_8 font_14">
 						From useful everyday parts to custom pieces made for your brand, 3D printing makes it
 						possible to create exactly what you need.
