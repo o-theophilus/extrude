@@ -37,8 +37,8 @@
 	<video src="/image/bg.mp4" autoplay muted loop playsinline></video>
 	<section id="what-we-print">
 		<div class="padding_5 grid_container">
-			<h2 class="max_text">Get a quote for your print.</h2>
-			<p class="max_text margin_16">
+			<h2 class="max_text">Get a quote based on your project.</h2>
+			<p class="max_text margin_16 font_14">
 				Every print is different, so we price each job based on what it actually takes to produce.
 			</p>
 

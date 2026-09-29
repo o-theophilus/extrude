@@ -1,10 +1,11 @@
 export { default as Hero } from './1_hero.svelte';
 export { default as Work } from './2_work.svelte';
+export { default as Metrics } from './3_metrics.svelte';
 export { default as Why } from './3_why.svelte';
 export { default as How } from './4_how.svelte';
 export { default as Spec } from './5_spec.svelte';
-export { default as Design } from './7_design.svelte';
-export { default as Print } from './6_print.svelte';
+export { default as Quote } from './6_quote.svelte';
+export { default as Model } from './7_model.svelte';
 export { default as FAQ } from './8_faq.svelte';
 export { default as CTA } from './9_cta.svelte';
 export { default as ContactForm } from './contact.svelte';

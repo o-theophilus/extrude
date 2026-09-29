@@ -208,7 +208,7 @@
 	/************************ outline */
 	/* --ol: light-dark(hsl(0, 0%, 85%), hsl(0, 0%, 25%)); */
 	.outline {
-		outline: 1px solid hsl(0, 0%, 94%);
+		outline: 1px solid var(--line1);
 		outline-offset: -1px;
 	}
 
