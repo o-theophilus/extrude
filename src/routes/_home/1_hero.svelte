@@ -3,7 +3,7 @@
 	import { Icon } from '$lib/macro';
 	import { module } from '$lib/store.svelte.js';
 	import ContactForm from './contact.svelte';
-	import Model from './model.svelte';
+	import Model from './1_model.svelte';
 
 	const hero = [
 		{
