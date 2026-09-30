@@ -29,14 +29,14 @@
 		Turn your ideas into <span class="fc_1">something you can hold.</span>
 	</h1>
 
-	<div class="top gap_80 margin_40">
+	<div class="top margin_40">
 		<div class="left">
 			<p class="font_14">
 				From custom products and prototypes to functional parts and branded pieces, we bring your
 				ideas to life through precision 3D printing.
 			</p>
 
-			<div class="margin_40">
+			<div class="margin_40 cta">
 				<Button
 					--button-background-color="var(--cta)"
 					--button-background-color-hover="var(--cta_)"
@@ -94,9 +94,14 @@
 
 		.right {
 			/* background-color: gray; */
-			aspect-ratio: 4/3;
-			position:relative;
+			aspect-ratio: 4/2;
+			position: relative;
 			z-index: 0;
+		}
+
+		.cta {
+			position: relative;
+			z-index: 1;
 		}
 	}
 
@@ -107,19 +112,12 @@
 
 		.card {
 			display: flex;
-			flex-direction: column;
 			gap: 24px;
 		}
 
 		.divider {
 			height: 1px;
 			background-color: var(--line1);
-		}
-
-		@container (min-width: 330px) {
-			.card {
-				flex-direction: row;
-			}
 		}
 
 		@container (min-width: 730px) {

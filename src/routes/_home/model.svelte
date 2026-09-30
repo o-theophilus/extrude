@@ -2,30 +2,22 @@
 	let progress = $state(0);
 </script>
 
-<svelte:head>
-	<script
-		type="module"
-		src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"
-	></script>
-</svelte:head>
-
 <model-viewer
 	onprogress={(e) => {
 		progress = e.detail.totalProgress;
 	}}
-	src="model/file.glb"
+	src="model.glb"
 	camera-controls
 	tone-mapping="neutral"
-	poster="model/poster.webp"
+	poster="model.webp"
 	shadow-intensity="1"
 	shadow-softness="1"
 	auto-rotate
-	camera-orbit="412.4deg 80.86deg 2.719m"
-	
+	camera-orbit="143.6deg 67.31deg 2.719m"
 	disable-zoom
 	disable-tap
 	disable-pan
-	interaction-prompt="none" 
+	interaction-prompt="none"
 >
 	<div class="loading hide" slot="progress-bar">
 		<div class="progress" style:--width="{progress * 100}%"></div>
@@ -61,15 +53,19 @@
 <style>
 	model-viewer {
 		position: absolute;
+
+		top: -70%;
 		right: 0;
-		bottom: 0;
 		width: 100%;
-		height: 100%;
+		height: 100vw;
 		z-index: -1;
-		
+		/* background-color: rgba(255, 0, 0, 0.072); */
+
 		@container (min-width: 1000px) {
-				width: 150%;
-				height: 150%;
+			top: -50%;
+			right: -20%;
+			width: 150%;
+			height: 200%;
 		}
 	}
 
