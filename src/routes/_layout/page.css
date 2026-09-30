@@ -40,7 +40,11 @@
 	}
 
 	.margin_160 {
-		margin-top: 160px;
+		margin-top: 120px;
+
+		@media screen and (min-width: 580px) {
+			margin-top: 160px;
+		}
 	}
 
 	/************************ padding */
@@ -61,8 +65,13 @@
 	}
 
 	.padding_5 {
-		padding-top: 160px;
-		padding-bottom: 160px;
+		padding-top: 120px;
+		padding-bottom: 120px;
+
+		@media screen and (min-width: 580px) {
+			padding-top: 160px;
+			padding-bottom: 160px;
+		}
 	}
 
 	/************************ gap */
