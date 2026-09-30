@@ -3,6 +3,7 @@
 	import { Icon } from '$lib/macro';
 	import { module } from '$lib/store.svelte.js';
 	import ContactForm from './contact.svelte';
+	import Model from './model.svelte';
 
 	const hero = [
 		{
@@ -49,7 +50,9 @@
 			</div>
 		</div>
 
-		<div class="right brad_16"></div>
+		<div class="right">
+			<Model></Model>
+		</div>
 	</div>
 
 	<div class="cards margin_80">
@@ -90,8 +93,10 @@
 		}
 
 		.right {
-			background-color: gray;
+			/* background-color: gray; */
 			aspect-ratio: 4/3;
+			position:relative;
+			z-index: 0;
 		}
 	}
 
