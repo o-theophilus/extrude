@@ -37,7 +37,6 @@
 <CTA></CTA>
 
 <!-- TODO: 
- popup gallery
  footer arrange
  footer address
  module width and scrolling fix
