@@ -3,7 +3,7 @@
 
 <div class="page_css">
 	<section>
-		<div class="logo f1">
+		<div class="logo">
 			<img src="/logo.png" alt="logo" />
 			Extrude
 		</div>

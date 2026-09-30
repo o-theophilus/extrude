@@ -65,12 +65,12 @@
 		color: var(--ft1);
 		fill: var(--cl1);
 		font-weight: 800;
+		font-size: 24px;
 		text-decoration: none;
 
 		img {
-			width: 32px;
-			height: 32px;
-			object-fit: contain;
+			width: 40px;
+			height: 40px;
 		}
 	}
 
