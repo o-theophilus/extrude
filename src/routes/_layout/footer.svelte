@@ -2,48 +2,35 @@
 	import Contact from './footer.contact.svelte';
 	import Nav from './footer.nav.svelte';
 	import Socials from './footer.socials.svelte';
+	import Logo from './logo.svelte';
 </script>
 
-<!-- --content-height="100%"
---content-padding-top="56px"
---content-padding-bottom="40px"
---content-background-color="var(--bg)" -->
-
-<div class="section">
+<footer class="bg_5 dark">
 	<section>
-		<div class="block">
-			<footer id="footer">
-				<div class="a">
-					<div class="logo">
-						<img src="/logo.png" alt="logo" />
-						Extrude
-					</div>
-					<span class="tiny"> Custom 3D print. </span>
-				</div>
-				<Socials />
-				<Contact />
-			</footer>
+		<div class="block padding_40">
+			<div class="a">
+				<Logo></Logo>
+				<p class="margin_8">Custom 3D print.</p>
+			</div>
+			<Contact />
+			<Socials />
+		</div>
+	</section>
 
-			<div class="copyright">
+	<div class="hr">
+		<section>
+			<div class="copyright padding_40">
 				<p class="font_08">&copy 2026 | Extrude. All rights reserved.</p>
 				<Nav />
 			</div>
-		</div>
-	</section>
-</div>
+		</section>
+	</div>
+</footer>
 
 <style>
-	.section {
-		border-top: 1px solid var(--line1);
-	}
 	.block {
-		padding-top: 56px;
-		padding-bottom: 40px;
-	}
-
-	footer {
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		gap: 40px;
 	}
@@ -54,35 +41,14 @@
 		}
 	}
 
-	.logo {
-		margin-bottom: 16px;
-
-		display: flex;
-		align-items: center;
-		gap: 8px;
-
-		width: fit-content;
-		color: var(--ft1);
-		fill: var(--cl1);
-		font-weight: 800;
-		text-decoration: none;
-
-		img {
-			width: 32px;
-			height: 32px;
-			object-fit: contain;
-		}
+	.hr {
+		border-top: 1px solid var(--line2);
 	}
-
 	.copyright {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		gap: 0 16px;
 		justify-content: space-between;
-
-		border-top: 1px solid var(--line1);
-		margin-top: 40px;
-		padding-top: 40px;
+		gap: 0 16px;
 	}
 </style>

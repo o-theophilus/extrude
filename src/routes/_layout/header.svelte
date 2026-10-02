@@ -1,29 +1,11 @@
 <script>
+	import Logo from './logo.svelte';
 </script>
 
 <div class="page_css">
 	<section>
-		<div class="logo f1">
-			<img src="/logo.png" alt="logo" />
-			Extrude
+		<div class="margin_40">
+			<Logo></Logo>
 		</div>
 	</section>
 </div>
-
-<style>
-	.logo {
-		display: flex;
-		align-items: center;
-		gap: 8px;
-
-		padding: 40px 0;
-
-		font-weight: 800;
-		font-size: 24px;
-	}
-
-	img {
-		width: 40px;
-		height: 40px;
-	}
-</style>

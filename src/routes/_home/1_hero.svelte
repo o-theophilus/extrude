@@ -23,7 +23,7 @@
 	];
 </script>
 
-<section class="grid_container margin_40 light">
+<section class="grid_container margin_60 light">
 	<h1>
 		Turn your ideas into <span class="fc_1">something you can hold.</span>
 	</h1>
