@@ -1,6 +1,21 @@
 <script>
 	import { Meta } from '$lib/macro';
-	import { CTA, FAQ, Hero, How, Metrics, Model, Quote, Spec, Why, Work } from './_home';
+	import {
+		Clients,
+		CTA,
+		FAQ,
+		Gallery,
+		Hero,
+		How,
+		Metrics,
+		Model,
+		Quote,
+		Spec,
+		Why,
+		Work
+	} from './_home';
+
+	let { data } = $props();
 </script>
 
 <Meta
@@ -10,7 +25,9 @@
 
 <Hero></Hero>
 <Work></Work>
+<Gallery gallery={data.gallery}></Gallery>
 <Metrics></Metrics>
+<Clients></Clients>
 <Why></Why>
 <How></How>
 <Spec></Spec>
@@ -20,9 +37,6 @@
 <CTA></CTA>
 
 <!-- TODO: 
- logo 
- hero 3d model
- popup gallery
  footer arrange
  footer address
  module width and scrolling fix

@@ -7,15 +7,12 @@
 	--overlay: rgba(128, 128, 128, 0.5);
 
 
-
-
-	
 	--cl2: light-dark(hsl(209, 58%, 84%), #011b33);
 	--cl3: #3bb75e;
 	--cl3_: rgb(27, 133, 27);
 	--yellow: rgb(255, 162, 0);
 	--input: hsla(230, 30%, 41%, 0.1);
-	--cta: rgb(209, 52, 52);
+	--cta: #D41927;
 	--cta_: black;
 
 
