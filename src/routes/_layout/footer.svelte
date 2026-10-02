@@ -7,7 +7,7 @@
 
 <footer class="bg_5 dark">
 	<section>
-		<div class="block padding_40">
+		<div class="block padding_4">
 			<div class="a">
 				<Logo></Logo>
 				<p class="margin_8">Custom 3D print.</p>

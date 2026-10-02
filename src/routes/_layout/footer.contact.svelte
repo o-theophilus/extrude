@@ -53,11 +53,12 @@
 		display: flex;
 		text-decoration: none;
 		border-radius: 8px;
+		padding-right: 8px;
 
 		transition: background-color 0.2s ease-in-out;
 
 		&:hover {
-			background-color: gray;
+			background-color: hsl(0, 0%, 20%);
 		}
 
 		color: var(--ft2);

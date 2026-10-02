@@ -1,8 +1,9 @@
 <script>
 	import { Icon } from '$lib/macro';
-	import { whatsapp } from '$lib/store.svelte.js';
 
 	let platforms = [
+		{ name: 'instagram', href: '/' },
+		{ name: 'tiktok', href: '/' },
 		{ name: 'instagram', href: '/' },
 		{ name: 'tiktok', href: '/' }
 	];
@@ -18,11 +19,13 @@
 
 <style>
 	.line {
-		gap: 4px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
 	}
 
 	a {
-		--size: 32px;
+		--size: 48px;
 		display: flex;
 		justify-content: center;
 		align-items: center;

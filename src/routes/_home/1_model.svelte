@@ -18,6 +18,8 @@
 	disable-tap
 	disable-pan
 	interaction-prompt="none"
+	max-camera-orbit="auto 90deg auto"
+	min-camera-orbit="auto 30deg auto"
 >
 	<div class="loading hide" slot="progress-bar">
 		<div class="progress" style:--width="{progress * 100}%"></div>
@@ -30,23 +32,25 @@
 		data-normal="-0.00003893124794905616m 0.5569663143310546m -0.8305350824527759m"
 		data-visibility-attribute="visible"
 	>
-		<div class="HotspotAnnotation">one</div>
-	</button><button
+		<div class="HotspotAnnotation">Multi-Colour Printing</div>
+	</button>
+	<button
 		class="Hotspot"
 		slot="hotspot-2"
 		data-position="-0.04644146907564123m 0.029901493899798657m -0.19817487277332696m"
 		data-normal="-0.09445607721115819m 0.043808051448051014m -0.9945646807051842m"
 		data-visibility-attribute="visible"
 	>
-		<div class="HotspotAnnotation">two</div>
-	</button><button
+		<div class="HotspotAnnotation">Durable PETG Material</div>
+	</button>
+	<button
 		class="Hotspot"
 		slot="hotspot-3"
 		data-position="0.62282186139064m 0.0033483593676277568m 0.1188090250561929m"
 		data-normal="-0.0000033816656785032087m -0.248265893158653m 0.968691925372923m"
 		data-visibility-attribute="visible"
 	>
-		<div class="HotspotAnnotation">three</div>
+		<div class="HotspotAnnotation">Intricate Details</div>
 	</button>
 </model-viewer>
 
@@ -101,67 +105,58 @@
 	}
 
 	.Hotspot {
+		position: relative;
+
+		height: 24px;
+		width: 24px;
+		padding: 8px;
+
 		background: #fff;
 		border-radius: 32px;
 		border: 0;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 		box-sizing: border-box;
+
 		cursor: pointer;
-		height: 24px;
-		padding: 8px;
-		position: relative;
 		transition: opacity 0.3s;
-		width: 24px;
-	}
 
-	.Hotspot:not([data-visible]) {
-		background: transparent;
-		border: 4px solid #fff;
-		box-shadow: none;
-		height: 32px;
-		pointer-events: none;
-		width: 32px;
-	}
+		&:focus {
+			border: 4px solid rgb(0, 128, 200);
+			height: 32px;
+			outline: none;
+			width: 32px;
+		}
 
-	.Hotspot:focus {
-		border: 4px solid rgb(0, 128, 200);
-		height: 32px;
-		outline: none;
-		width: 32px;
+		> * {
+			opacity: 1;
+			transition: opacity 0.3s;
+		}
+		
+		&:not([data-visible]) {
+			background: transparent;
+			border: 4px solid #fff;
+			box-shadow: none;
+			height: 32px;
+			pointer-events: none;
+			width: 32px;
+			> * {
+				opacity: 0;
+				pointer-events: none;
+			}
+		}
 	}
-
-	.Hotspot > * {
-		opacity: 1;
-		transform: translateY(-50%);
-	}
-
+	
 	.HotspotAnnotation {
-		background: #fff;
-		border-radius: 4px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-		color: rgba(0, 0, 0, 0.8);
-		display: block;
-		font-family:
-			Futura,
-			Helvetica Neue,
-			sans-serif;
-		font-size: 18px;
-		font-weight: 700;
-		left: calc(100% + 1em);
-		max-width: 128px;
-		overflow-wrap: break-word;
 		padding: 0.5em 1em;
 		position: absolute;
+		left: calc(100% + 8px);
+		transform: translateY(-50%);
 		top: 50%;
-		width: max-content;
-	}
 
-	.Hotspot:not([data-visible]) > * {
-		opacity: 0;
-		pointer-events: none;
-		transform: translateY(calc(-50% + 4px));
-		transition:
-			transform 0.3s,
-			opacity 0.3s;
+		background: rgba(255, 255, 255, 0.8);
+		border-radius: 4px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+		max-width: 150px;
+		width: max-content;
 	}
 </style>

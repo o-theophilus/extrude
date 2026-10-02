@@ -64,6 +64,11 @@
 		padding: 64px;
 	}
 
+	.padding_4 {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
 	.padding_5 {
 		padding-top: 120px;
 		padding-bottom: 120px;

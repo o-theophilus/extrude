@@ -4,7 +4,7 @@
 
 <div class="card brad_16 dark">
 	<img src="gallery/{one.img}" alt={one.title} />
-	<div class="detail padding_24">
+	<div class="detail padding_16">
 		<h5>{one.title}</h5>
 		<div class="hidden">
 			<div>
@@ -42,8 +42,11 @@
 	.detail {
 		position: absolute;
 		bottom: 0;
-
 		background-color: rgba(0, 0, 0, 0.6);
+
+		@container (min-width: 600px) {
+			padding: 24px !important;
+		}
 	}
 
 	.hidden {
@@ -57,5 +60,9 @@
 			margin: 0;
 			transition: margin 0.2s ease-in-out;
 		}
+	}
+
+	p {
+		line-height: 120%;
 	}
 </style>
