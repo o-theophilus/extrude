@@ -1,5 +1,21 @@
 <script>
-	import { Icon } from '$lib/macro';
+	import { Box, Clock, createIcons, Palette, Printer } from 'lucide';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		createIcons({
+			icons: {
+				Box,
+				Palette,
+				Printer,
+				Clock
+			},
+			attrs: {
+				'stroke-width': 2.5
+			},
+			nameAttr: 'icon'
+		});
+	});
 
 	let materials = [
 		{
@@ -51,7 +67,7 @@
 				{#each capabilities as x}
 					<div class="card outline brad_16 padding_24 center">
 						<div class="icon bg_4 fc_2 center">
-							<Icon icon={x.icon} size="24" />
+							<svg icon={x.icon}></svg>
 						</div>
 						<h4 class="margin_16">{x.value}</h4>
 						<p class="font_08">{x.label}</p>

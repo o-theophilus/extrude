@@ -1,5 +1,21 @@
 <script>
-	import { Icon } from '$lib/macro';
+	import { Box, ClipboardList, createIcons, Layers, Lightbulb } from 'lucide';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		createIcons({
+			icons: {
+				ClipboardList,
+				Lightbulb,
+				Layers,
+				Box
+			},
+			attrs: {
+				'stroke-width': 2.5
+			},
+			nameAttr: 'icon'
+		});
+	});
 
 	const whyPrint = [
 		{
@@ -38,7 +54,7 @@
 				{#each whyPrint as x}
 					<div>
 						<div class="icon left bg_4 white">
-							<Icon icon={x.icon} size="24" />
+							<svg icon={x.icon}></svg>
 						</div>
 						<h4 class="margin_16">{x.title}</h4>
 						<p class="margin_8">{x.text}</p>

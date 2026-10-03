@@ -1,10 +1,8 @@
 <script>
-	import { Button } from '$lib/button';
+	import CTA from '$lib/cta.svelte';
 	import { Carousel } from '$lib/macro';
-	import { module } from '$lib/store.svelte.js';
 	import { createIcons, MessageCircle, Package, Printer, ReceiptText } from 'lucide';
 	import { onMount } from 'svelte';
-	import ContactForm from './contact.svelte';
 
 	onMount(() => {
 		createIcons({
@@ -70,18 +68,7 @@
 	</Carousel>
 
 	<div class="margin_80 center">
-		<Button
-			--button-background-color="var(--cta)"
-			--button-background-color-hover="var(--cta_)"
-			--button-color="white"
-			--button-outline-color="transparent"
-			icon2="arrow-right"
-			onclick={() => {
-				module.open(ContactForm);
-			}}
-		>
-			Get Started
-		</Button>
+		<CTA>Get Started</CTA>
 	</div>
 </div>
 

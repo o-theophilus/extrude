@@ -1,6 +1,5 @@
 <script>
-	import { LinkArrow } from '$lib/button';
-	import { whatsapp } from '$lib/store.svelte.js';
+	import CTA from '$lib/cta.svelte';
 </script>
 
 <div class="bg_1 light">
@@ -24,12 +23,7 @@
 					</ul>
 
 					<div class="margin_24">
-						<LinkArrow
-							href="https://wa.me/{whatsapp}?text=Hi Extrude, I'd like help turning a photo/sketch/idea into a 3D model."
-							blank
-						>
-							Ask About Modelling
-						</LinkArrow>
+						<CTA>Ask About Modelling</CTA>
 					</div>
 				</div>
 

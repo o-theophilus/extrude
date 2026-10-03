@@ -7,8 +7,6 @@
 
 {#if module.module}
 	<section>
-		<div></div>
-
 		<div class="block" transition:scale|local={{ delay: 0, duration: 200, easing: backInOut }}>
 			<div class="close">
 				<RoundButton
@@ -22,49 +20,49 @@
 				<svelte:component this={module.module} />
 			</div>
 		</div>
-
-		<div></div>
 	</section>
 {/if}
 
 <style>
 	section {
-		z-index: 1;
-
-		display: grid;
-		align-items: center;
-		grid-template-columns: 1fr min(400px, 100%) 1fr;
+		--pad: 64px;
 
 		position: fixed;
 		inset: 0;
+		z-index: 1;
 
-		padding: 64px 24px;
-		overflow-y: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
+		padding: 0 24px !important;
 		background-color: var(--overlay);
+
+		.block {
+			position: relative;
+		}
 	}
 
 	.close {
 		position: absolute;
-		--pos: -10px;
+		--pos: -20px;
 		top: var(--pos);
 		right: var(--pos);
 
-		--button-color: hsl(0, 0%, 70%);
-		--button-color-hover_: hsl(0, 0%, 95%);
-		--button-background-color_: darkred;
-		--button-background-color-hover_: red;
+		--button-color: white;
+		--button-background-color_: red;
+		--button-background-color-hover_: darkred;
 		--button-outline-color-hover_: transparent;
 	}
 
-	.block {
-		position: relative;
-	}
 	.content {
 		background-color: white;
 		box-shadow: 0 0 10px 0 var(--input);
 		border-radius: 8px;
 
-		overflow: hidden;
+		max-width: 600px;
+		max-height: calc(100vh - var(--pad) * 2);
+
+		overflow-y: auto;
 	}
 </style>

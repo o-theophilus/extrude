@@ -1,4 +1,5 @@
 <script>
+
 	let { one } = $props();
 </script>
 

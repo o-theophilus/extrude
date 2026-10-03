@@ -10,5 +10,5 @@ export { default as Why } from './6_why.svelte';
 export { default as How } from './7_how.svelte';
 export { default as Spec } from './8_spec.svelte';
 export { default as Quote } from './9_quote.svelte';
-export { default as ContactForm } from './contact.svelte';
+export { default as ContactForm } from '../../lib/contact.svelte';
 

@@ -4,7 +4,7 @@
 	let { gallery } = $props();
 </script>
 
-<div class="light bg_6 padding_5 grid_container">
+<div class="light bg_6 margin_160 grid_container">
 	<section>
 		<h2>Made by Extrude</h2>
 		<p class="margin_8 font_14 max_text">

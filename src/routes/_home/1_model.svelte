@@ -2,75 +2,81 @@
 	let progress = $state(0);
 </script>
 
-<model-viewer
-	onprogress={(e) => {
-		progress = e.detail.totalProgress;
-	}}
-	src="model.glb"
-	camera-controls
-	tone-mapping="neutral"
-	poster="model.webp"
-	shadow-intensity="1"
-	shadow-softness="1"
-	auto-rotate
-	camera-orbit="143.6deg 67.31deg 2.719m"
-	disable-zoom
-	disable-tap
-	disable-pan
-	interaction-prompt="none"
-	max-camera-orbit="auto 90deg auto"
-	min-camera-orbit="auto 30deg auto"
->
-	<div class="loading hide" slot="progress-bar">
-		<div class="progress" style:--width="{progress * 100}%"></div>
-	</div>
+<div class="contain">
+	<model-viewer
+		onprogress={(e) => {
+			progress = e.detail.totalProgress;
+		}}
+		src="model.glb"
+		camera-controls
+		tone-mapping="neutral"
+		poster="model.webp"
+		shadow-intensity="1"
+		shadow-softness="1"
+		auto-rotate
+		camera-orbit="143.6deg 67.31deg 2.719m"
+		disable-zoom
+		disable-tap
+		disable-pan
+		interaction-prompt="none"
+		max-camera-orbit="auto 90deg auto"
+		min-camera-orbit="auto 30deg auto"
+	>
+		<div class="loading hide" slot="progress-bar">
+			<div class="progress" style:--width="{progress * 100}%"></div>
+		</div>
 
-	<button
-		class="Hotspot"
-		slot="hotspot-1"
-		data-position="0.44865892813203834m 0.021920072143556305m -0.20134457292272898m"
-		data-normal="-0.00003893124794905616m 0.5569663143310546m -0.8305350824527759m"
-		data-visibility-attribute="visible"
-	>
-		<div class="HotspotAnnotation">Multi-Colour Printing</div>
-	</button>
-	<button
-		class="Hotspot"
-		slot="hotspot-2"
-		data-position="-0.04644146907564123m 0.029901493899798657m -0.19817487277332696m"
-		data-normal="-0.09445607721115819m 0.043808051448051014m -0.9945646807051842m"
-		data-visibility-attribute="visible"
-	>
-		<div class="HotspotAnnotation">Durable PETG Material</div>
-	</button>
-	<button
-		class="Hotspot"
-		slot="hotspot-3"
-		data-position="0.62282186139064m 0.0033483593676277568m 0.1188090250561929m"
-		data-normal="-0.0000033816656785032087m -0.248265893158653m 0.968691925372923m"
-		data-visibility-attribute="visible"
-	>
-		<div class="HotspotAnnotation">Intricate Details</div>
-	</button>
-</model-viewer>
+		<button
+			class="Hotspot"
+			slot="hotspot-1"
+			data-position="0.44865892813203834m 0.021920072143556305m -0.20134457292272898m"
+			data-normal="-0.00003893124794905616m 0.5569663143310546m -0.8305350824527759m"
+			data-visibility-attribute="visible"
+		>
+			<div class="HotspotAnnotation">Multi-Colour Printing</div>
+		</button>
+		<button
+			class="Hotspot"
+			slot="hotspot-2"
+			data-position="-0.04644146907564123m 0.029901493899798657m -0.19817487277332696m"
+			data-normal="-0.09445607721115819m 0.043808051448051014m -0.9945646807051842m"
+			data-visibility-attribute="visible"
+		>
+			<div class="HotspotAnnotation">Durable PETG Material</div>
+		</button>
+		<button
+			class="Hotspot"
+			slot="hotspot-3"
+			data-position="0.62282186139064m 0.0033483593676277568m 0.1188090250561929m"
+			data-normal="-0.0000033816656785032087m -0.248265893158653m 0.968691925372923m"
+			data-visibility-attribute="visible"
+		>
+			<div class="HotspotAnnotation">Intricate Details</div>
+		</button>
+	</model-viewer>
+</div>
 
 <style>
-	model-viewer {
+	.contain {
 		position: absolute;
 
 		top: -70%;
-		right: 0;
-		width: 100%;
 		height: 100vw;
+		width: 100%;
 		z-index: -1;
-		/* background-color: rgba(255, 0, 0, 0.072); */
+		/* background-color: rgba(0, 0, 0, 0.172); */
 
 		@container (min-width: 1000px) {
 			top: -50%;
-			right: -20%;
-			width: 150%;
+			right: 0;
+			width: 130%;
 			height: 200%;
 		}
+	}
+
+	model-viewer {
+		width: 100%;
+		height: 100%;
 	}
 
 	.loading {
@@ -131,7 +137,7 @@
 			opacity: 1;
 			transition: opacity 0.3s;
 		}
-		
+
 		&:not([data-visible]) {
 			background: transparent;
 			border: 4px solid #fff;
@@ -145,7 +151,7 @@
 			}
 		}
 	}
-	
+
 	.HotspotAnnotation {
 		padding: 0.5em 1em;
 		position: absolute;

@@ -35,10 +35,3 @@
 <Model></Model>
 <FAQ></FAQ>
 <CTA></CTA>
-
-<!-- TODO: 
- footer arrange
- footer address
- module width and scrolling fix
- 
--->

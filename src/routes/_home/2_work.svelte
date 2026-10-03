@@ -1,8 +1,6 @@
 <script>
-	import { Button } from '$lib/button';
-	import { module } from '$lib/store.svelte.js';
+	import CTA from '$lib/cta.svelte';
 	import One from './2_work.one.svelte';
-	import ContactForm from './contact.svelte';
 
 	const whatWePrint = [
 		{
@@ -40,18 +38,7 @@
 					</p>
 
 					<div class="margin_40">
-						<Button
-							--button-background-color="var(--cta)"
-							--button-background-color-hover="var(--cta_)"
-							--button-color="white"
-							--button-outline-color="transparent"
-							icon2="arrow-right"
-							onclick={() => {
-								module.open(ContactForm);
-							}}
-						>
-							Request a Quote
-						</Button>
+						<CTA>Request a Quote</CTA>
 					</div>
 				</div>
 

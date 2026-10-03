@@ -1,9 +1,22 @@
 <script>
-	import { Button } from '$lib/button';
-	import { Icon } from '$lib/macro';
-	import { module } from '$lib/store.svelte.js';
-	import ContactForm from './contact.svelte';
+	import CTA from '$lib/cta.svelte';
 	import Model from './1_model.svelte';
+	import { Box, Palette, Zap, createIcons } from 'lucide';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		createIcons({
+			icons: {
+				Box,
+				Palette,
+				Zap
+			},
+			attrs: {
+				'stroke-width': 2.5
+			},
+			nameAttr: 'icon'
+		});
+	});
 
 	const hero = [
 		{
@@ -37,16 +50,7 @@
 			</p>
 
 			<div class="margin_40 cta">
-				<Button
-					--button-background-color="var(--cta)"
-					--button-background-color-hover="var(--cta_)"
-					--button-color="white"
-					--button-outline-color="transparent"
-					icon2="arrow-right"
-					onclick={() => module.open(ContactForm)}
-				>
-					Request a Quote
-				</Button>
+				<CTA hero>Request a Quote</CTA>
 			</div>
 		</div>
 
@@ -63,7 +67,7 @@
 
 			<div class="card">
 				<div class="icon left bg_4 f1_dark">
-					<Icon icon={x.icon} size="24" />
+					<svg icon={x.icon}></svg>
 				</div>
 				<div class="text">
 					<h4>{x.title}</h4>
@@ -93,10 +97,10 @@
 		}
 
 		.right {
-			/* background-color: gray; */
-			aspect-ratio: 4/2;
 			position: relative;
+			aspect-ratio: 4/2;
 			z-index: 0;
+			/* background-color: gray; */
 		}
 
 		.cta {

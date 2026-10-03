@@ -1,146 +1,143 @@
-export let content = `
-1. ### Introductions
 
-	Welcome to Meji! These Terms and Conditions govern your use of the Meji platform (the "Site") and our services for selling unique, artisanal, and locally sourced products. By accessing or using our Site, you agree to be bound by these Terms.
+export let content = `
+1. ### Introduction
+
+	Welcome to Extrude. These Terms and Conditions govern your use of our website and 3D printing services. By requesting a quote, placing an order or using our services, you agree to these Terms.
 
 1. ### Definitions
 
-	- **"Meji," "we," "us," or "our"** refers to the Meji platform and its operators
-	- **"User," "you," or "your"** refers to any individual accessing the Site
-	- **"Buyer"** refers to a User purchasing products on Meji
-	- **"Content"** includes text, images, photos, audio, video, and all other data
-	- **"Products"** refers to items listed for sale on Meji
-
-1. ### Acceptance of Terms
-
-	By accessing, browsing, or using the Site, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, you may not access or use the Site.
+	- **"Extrude," "we," "us," or "our"** refers to Extrude and its operators.
+	- **"Customer," "you," or "your"** refers to anyone using our services.
+	- **"Services"** refers to 3D printing, prototyping, custom production and related services.
+	- **"Project Files"** refers to 3D models, images, sketches, drawings and other materials provided by customers.
+	- **"Order"** refers to a confirmed request for our services.
 
 1. ### Eligibility
 
-	You must be at least 18 years old to use Meji. By using the Site, you represent that you are at least 18 years old and have the legal capacity to enter into binding contracts.
+	You must be at least 18 years old or legally authorised to act on behalf of a business to use our services.
 
-1. ### Account Registration
+	By engaging Extrude, you confirm that the information and materials you provide are accurate and that you have the necessary rights to use any submitted designs.
 
-	1. ###### Account Creation
-		To use certain features, you must register for an account. You agree to:
-		- Provide accurate, current, and complete information
-		- Maintain and promptly update your account information
-		- Maintain the security of your password
-		- Accept responsibility for all activities under your account
+1. ### Our Services
 
-	1. ###### Account Termination
-		We may, at our discretion, terminate or suspend your account with or without notice, for conduct that we believe:
-		- Violates these Terms
-		- Is harmful to other Users
-		- Is harmful to our business interests
-		- Is unlawful
+	Extrude provides custom 3D printing, prototypes, functional parts, branded products, personalised items and related services.
 
-1. ### Buying on Meji
+	We reserve the right to assess, accept or decline projects based on technical feasibility, material availability, equipment capabilities, safety requirements and applicable laws.
 
-	1. ###### Product Listings
-		- We strive to provide accurate and up-to-date product information, but we do not guarantee that all descriptions are error-free or complete
-		- Products sold on Meji are curated and may be fulfilled directly by us or our trusted partners.
-		- Colors may appear slightly different on various screens
-		- Natural variations in handmade items are not considered defects
+	Where necessary, we may recommend design adjustments or alternative materials to achieve better results.
 
-	1. ###### Order Process
-		- A sale is considered final when payment is successfully processed and an order confirmation is issued.
+1. ### Quotes and Orders
 
-		- We may refuse or cancel any order for reasons including but not limited to:
-			1. Product availability
-			1. Errors in pricing or description
-			1. Suspected fraud or unauthorized transactions
+	Customers can request quotes by submitting a 3D file, photograph, sketch or description of their requirements.
 
-	1. ###### Pricing and Payment
-		- You agree to pay the full amount (item price + shipping + applicable taxes)
-		- Payments are processed through secure third-party providers
-		- We are not responsible for payment failures caused by third-party services
-		- Orders will not be processed until payment is successfully completed
+	Quotes are based on factors such as size, material, print time, quantity, colour and finishing requirements.
 
-1. ### Shipping and Delivery
+	- Quotes are valid for 7 calendar days unless otherwise stated.
+	- An order is confirmed once the customer approves the quote and fulfils the required payment conditions.
+	- Changes to an approved order may affect the price and production timeline.
+	- Additional costs will be communicated for approval before proceeding.
 
-	We aim to ensure timely and secure delivery. However, we are not liable for delays caused by:
-	- Courier services
-	- Weather conditions
-	- Customs or regulatory delays
+	We are not obligated to commence production until the order has been confirmed.
 
-	Risk of loss passes to you once the product is delivered to the address provided at checkout.
+1. ### Design Files and Customer Responsibilities
 
-1. ### Returns and Refunds
+	Customers are responsible for ensuring that submitted designs, files, measurements and specifications are accurate and that they have permission to use them.
 
-	- Returns are accepted only for defective, damaged, or incorrect items unless otherwise stated.
-	- Items must be returned within 7 days of delivery
-	- Items must be unused and in original packaging
-	- Approved refunds will be processed within 7 business days
-	- Shipping fees are non-refundable unless the return is due to our error
-	- We may refuse returns that do not meet these conditions
+	Where a customer requires 3D modelling or design modifications, additional charges may apply and will be communicated beforehand.
+
+	Customers are responsible for reviewing and approving relevant designs and specifications before production begins.
+
+1. ### Pricing and Payment
+
+	All prices will be communicated in the quotation before production.
+
+	We may require full payment or a deposit before commencing an order. Any outstanding balance must be settled according to the agreed payment terms.
+
+	Production will only begin once the required payment has been confirmed.
+
+1. ### Production and Quality
+
+	Most standard orders typically take 2 to 5 working days after approval and payment. Larger or more complex projects may require additional time.
+
+	3D printing may involve minor layer lines, surface variations, dimensional tolerances and colour differences. These are normal characteristics of the process and do not automatically constitute defects.
+
+	We aim to deliver prints that meet the agreed specifications and reasonable quality expectations.
+
+	We currently offer PLA, PLA Matte, PLA Silk, PETG and TPU, subject to availability.
+
+	Unless expressly agreed otherwise, our prints are not certified for medical, food-contact, safety-critical, high-pressure or other specialised applications.
+
+1. ### Delivery and Collection
+
+	We offer collection and delivery arrangements depending on the customer's location and order requirements.
+
+	Delivery fees will be communicated before dispatch. Customers are responsible for providing accurate delivery information.
+
+	We are not responsible for delays caused by independent delivery providers or circumstances beyond our reasonable control, subject to applicable law.
+
+1. ### Cancellations, Returns and Refunds
+
+	Customers may request cancellation before production begins. Once production has started, cancellation may result in charges for work completed and materials used.
+
+	If an order is defective, incorrectly produced or materially different from the agreed specifications due to an error on our part, please contact us within 7 days of receiving it.
+
+	Following an assessment, we may offer a repair, replacement, reprint or appropriate refund.
+
+	We may decline claims resulting from incorrect customer specifications, approved designs, misuse or normal characteristics of 3D printing.
+
+	Nothing in these Terms limits your statutory consumer rights.
 
 1. ### Intellectual Property
 
-	1. ###### Meji's Intellectual Property
-		All Site content, features, and functionality are owned by Meji and protected by international copyright laws.
+	Customers retain ownership of designs, models, sketches and other materials they provide to Extrude.
 
-	1. ###### Copyright Infringement
-		If you believe your intellectual property has been infringed, [contact us](https://meji.ng/contact) with:
-		- Identification of the copyrighted work
-		- Location of the infringing material
-		- Your contact information
-		- A statement of good faith belief
+	By submitting these materials, you grant us permission to use them solely for assessing and fulfilling your order.
 
-1. ### User Conduct
+	Original modelling or design work commissioned from Extrude may be subject to separate ownership and usage agreements.
 
-	You agree not to:
-	- Use the Site for unlawful, harmful, or fraudulent purposes
-	- Attempt to gain unauthorized access to systems
-	- Interfere with platform security or performance
-	- Use bots or scraping tools without permission
-	- Post misleading, abusive, or harmful content
+	We will seek your permission before publicly featuring identifiable customer designs or commissioned work in our portfolio, website or marketing materials.
 
-1. ### Dispute Resolution
+	All Extrude branding, website content, graphics and other original materials remain our intellectual property or that of their respective owners.
 
-	We encourage you to [contact us](https://meji.ng/contact) first to resolve any disputes.
+1. ### Customer Conduct
 
-1. ### Disclaimer of Warranties
+	Customers agree not to:
 
-	The Site is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to:
-	- Merchantability
-	- Fitness for a particular purpose
-	- Non-infringement
-	- Accuracy or reliability
+	- Submit unlawful or prohibited designs.
+	- Infringe the intellectual property rights of others.
+	- Provide misleading project information.
+	- Use our services for unlawful activities.
+	- Attempt to compromise our website or systems.
 
+	We reserve the right to decline or discontinue services where these requirements are violated.
 
-1. ### Limitation of Liability
+1. ### Disclaimer and Limitation of Liability
 
-	To the maximum extent permitted by law, Meji shall not be liable for, or responsible in any way for:
+	Our website and services are provided on an as-available basis. While we make reasonable efforts to ensure quality and reliability, we cannot guarantee uninterrupted website availability or that every submitted design can be manufactured.
 
-	- Indirect, incidental, consequential, special, or punitive damages
-	- Losses arising from User transactions or use of the Site
-	- Delays, failures, or disruptions caused by third-party service providers, including payment processors, logistics partners, or infrastructure providers
-	- Delays, failures, or disruptions caused by events beyond our reasonable control, including natural disasters, strikes, internet outages, or government actions (Force Majeure)
+	Customers are responsible for ensuring that printed products are suitable for their intended applications.
 
-	In all cases, Meji's total liability shall not exceed the total amount paid by you for the specific order giving rise to the claim.
+	To the maximum extent permitted by law, Extrude shall not be liable for indirect or consequential losses, or damage arising from misuse, improper handling or applications outside agreed specifications.
 
-1. ### Governing Law
+	Nothing in these Terms excludes liability that cannot legally be excluded under applicable law.
 
-	These Terms shall be governed by and construed in accordance with the laws of Nigeria, without regard to its conflict of law provisions.
-	
-	Your use of the Site is also governed by our [Privacy Policy](https://meji.ng/policy).
-	
+1. ### Governing Law and Dispute Resolution
 
-1. ### Modifications and Changes
+	These Terms shall be governed by the laws of the Federal Republic of Nigeria.
 
-	We reserve the right to modify, suspend, or discontinue any part of the Site at any time without notice. We may also update these Terms from time to time. Material changes will be communicated by posting on the Site, sending email notifications, or updating the “Last Updated” date.
+	We encourage customers to contact us directly to resolve any complaints or disputes. Where an agreement cannot be reached, disputes may be referred to the appropriate authorities or courts in Nigeria.
 
-	Your continued use of the Site after changes take effect constitutes acceptance of the updated Terms.
+	Your use of our website is also governed by our [Privacy Policy](https://extrude-ten.vercel.app/privacy) and [Cookies Policy](https://extrude-ten.vercel.app/cookies).
 
+1. ### Modifications and General Provisions
 
-1. ### General Provisions
+	We reserve the right to update these Terms or modify our services when necessary. Updated versions will be published on our website.
 
-	If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue in full force and effect.
+	If any provision is found to be unenforceable, the remaining provisions will remain effective.
 
-	These Terms constitute the entire agreement between you and Meji regarding the use of the Site and supersede all prior agreements or understandings.
+	Project-specific agreements and approved quotations will take precedence over these general Terms where applicable.
 
 ---
 
-*Thank you for being part of the Meji community.*
-	`
+*Thank you for choosing Extrude. We look forward to bringing your ideas to life.*
+`;

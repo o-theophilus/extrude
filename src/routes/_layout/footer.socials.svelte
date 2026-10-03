@@ -3,13 +3,13 @@
 
 	let platforms = [
 		{ name: 'instagram', href: '/' },
+		{ name: 'twitter', href: '/' },
 		{ name: 'tiktok', href: '/' },
-		{ name: 'instagram', href: '/' },
-		{ name: 'tiktok', href: '/' }
+		{ name: 'facebook', href: '/' }
 	];
 </script>
 
-<div class="line">
+<div class="block">
 	{#each platforms as { name, href }}
 		<a {href} target="_blank" rel="noopener noreferrer">
 			<Icon icon={name} />
@@ -18,10 +18,9 @@
 </div>
 
 <style>
-	.line {
+	.block {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 8px;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 
 	a {
@@ -34,14 +33,13 @@
 		height: var(--size);
 		border-radius: 40%;
 
-		background-color: var(--bg2);
-		fill: var(--ft2);
 		color: var(--ft2);
+		fill: currentColor;
 
 		transition: background-color 0.2s ease-in-out;
-	}
 
-	a:hover {
-		background-color: var(--bg1);
+		&:hover {
+			background-color: var(--cl44);
+		}
 	}
 </style>

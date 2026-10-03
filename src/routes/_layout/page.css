@@ -64,6 +64,11 @@
 		padding: 64px;
 	}
 
+	.padding_2 {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
 	.padding_4 {
 		padding-top: 40px;
 		padding-bottom: 40px;
@@ -207,7 +212,7 @@
 	}
 
 	.bg_5 {
-		background-color: #1B1B1F;
+		background-color: hsl(240, 7%, 11%);
 	}
 
 	.bg_4 {

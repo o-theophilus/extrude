@@ -1,8 +1,23 @@
 <script>
-	import { Button } from '$lib/button';
-	import { Icon } from '$lib/macro';
-	import { module } from '$lib/store.svelte.js';
-	import ContactForm from './contact.svelte';
+	import CTA from '$lib/cta.svelte';
+	import { Clock, Copy, Layers, Maximize, Sparkles, createIcons } from 'lucide';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		createIcons({
+			icons: {
+				Maximize,
+				Layers,
+				Clock,
+				Copy,
+				Sparkles
+			},
+			attrs: {
+				'stroke-width': 2.5
+			},
+			nameAttr: 'icon'
+		});
+	});
 
 	let pricingFactors = [
 		{
@@ -46,7 +61,7 @@
 				{#each pricingFactors as x}
 					<div class="card">
 						<div class="icon left bg_4 fc_2">
-							<Icon icon={x.icon} size="24" />
+							<svg icon={x.icon}></svg>
 						</div>
 						<h4 class="margin_16">{x.title}</h4>
 						<p class="margin_8">{x.text}</p>
@@ -55,18 +70,7 @@
 			</div>
 
 			<div class="margin_40">
-				<Button
-					--button-background-color="var(--cta)"
-					--button-background-color-hover="var(--cta_)"
-					--button-color="white"
-					--button-outline-color="transparent"
-					icon2="arrow-right"
-					onclick={() => {
-						module.open(ContactForm);
-					}}
-				>
-					Request a Quote
-				</Button>
+				<CTA>Request a Quote</CTA>
 			</div>
 
 			<p class="margin_16 font_08">

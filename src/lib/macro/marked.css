@@ -5,9 +5,9 @@
 	width: 100%;
 	/* margin: 20px auto; */
 	/* padding: 16px; */
-	margin-top: 16px ;
+	margin-top: 16px;
 	border-radius: 8px;
-	
+
 	background-color: var(--bg1);
 }
 
@@ -16,6 +16,7 @@ blockquote {
 	font-style: italic;
 	background-color: var(--bg1);
 }
+
 .markdown blockquote img {
 	margin: 0;
 	padding: 0;
@@ -41,12 +42,12 @@ blockquote {
 	height: 40px;
 	padding: 0 24px;
 	border-radius: 8px;
-	
+
 	font-weight: 800;
 	background-color: var(--cl1);
 	color: white;
 	text-decoration: none;
-	
+
 	transition: background-color 0.2s ease-in-out;
 }
 
@@ -58,73 +59,74 @@ blockquote {
 	color: var(--ft1);
 }
 
+.markdown {
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 32px 0 16px;
-	color: var(--ft1);
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 32px 0 16px;
+		color: var(--ft1);
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.7rem;
+	}
+
+	h3 {
+		font-size: 1.58rem;
+	}
+
+	h4 {
+		font-size: 1.46rem;
+	}
+
+	h5 {
+		font-size: 1.32rem;
+	}
+
+	h6 {
+		font-size: 1.2rem;
+	}
+
+	p,
+	ul {
+		margin: 16px 0;
+	}
+
+	ol,
+	ul {
+		padding-left: 24px;
+	}
+
+	/* ##################################### */
+
+	pre {
+		padding: 20px;
+		margin: 16px 0;
+		border-radius: 4px;
+
+		background-color: hsl(0, 0%, 15%);
+
+		overflow-y: auto;
+		font-size: 0.8rem;
+	}
+
+	code {
+		color: green;
+	}
+
+	pre code {
+		color: white;
+
+	}
 }
-
-h1 {
-	font-size: 2rem;
-}
-
-h2 {
-	font-size: 1.7rem;
-}
-
-h3 {
-	font-size: 1.58rem;
-}
-
-h4 {
-	font-size: 1.46rem;
-}
-
-h5 {
-	font-size: 1.32rem;
-}
-
-h6 {
-	font-size: 1.2rem;
-}
-
-p,
-ul{
-	margin: 16px 0;
-}
-
-ol,
-ul {
-	padding-left: 24px;
-}
-
-/* ##################################### */
-
-pre {
-	padding: 20px;
-	margin: 16px 0;
-	border-radius: 4px;
-
-	background-color: hsl(0, 0%, 15%);
-
-	overflow-y: auto;
-	font-size: 0.8rem;
-}
-
-code {
-	color: green;
-}
-
-pre code {
-	color: white;
-
-}
-
 
 /* Comment */
 .hljs-comment,

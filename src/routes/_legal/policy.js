@@ -1,207 +1,105 @@
+
 export let privacyPolicy = `
 1. ### Introduction
 
-	Welcome to Meji. We are committed to protecting your privacy and handling your personal information with care. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
-
-	By using Meji, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms of this Privacy Policy, please do not access the Site.
+	Welcome to Extrude. We respect your privacy and are committed to protecting your personal information. This policy explains how we collect, use, store and protect your information when you visit our website or use our 3D printing services.
 
 1. ### Information We Collect
 
-	1. ##### Information You Provide Directly
+	We may collect the following information when you contact us, request a quote or place an order:
 
-		We collect information you provide when you:
-		- Create an account
-		- Make a purchase
-		- Contact customer support
-		- Subscribe to our newsletter
-		- Participate in surveys or promotions
-		- Post reviews or comments
-
-		This information may include:
-		- **Personal Information:** Name, email address, phone number, billing and shipping addresses
-		- **Payment Information:** Credit card details (processed securely by our payment processors)
-		- **User Content:** Reviews, Comments, photos, messages to other users
-
-	1. ##### Information Collected Automatically
-
-		When you use Meji, we automatically collect:
-		- **Device Information:** IP address, browser type, operating system
-		- **Usage Data:** Pages visited, time spent, links clicked
-		- **Transaction Information:** Purchase history, items viewed, search queries
-		- **Cookies and Tracking Technologies:** See cookies policy section below for details
-
-	1. ##### Information from Third Parties
-
-		We may receive information about you from:
-		- Social media platforms (if you connect your account)
-		- Payment processors
-		- Shipping carriers
-		- Analytics providers
-		- Marketing partners
+	- **Personal Details:** Name, email address, phone number and delivery address.
+	- **Project Information:** 3D files, photographs, sketches, measurements and printing specifications.
+	- **Transaction Details:** Payment references, order details and delivery information.
+	- **Technical Information:** IP address, browser type, device information and website usage data.
+	- **Cookies:** Information collected through cookies and similar technologies.
 
 1. ### How We Use Your Information
 
-	We use your information for the following purposes:
+	We use your information to:
 
-	1. ##### To Provide Our Services
-		- Process transactions and fulfill orders
-		- Provide customer support
-		- Verify your identity and prevent fraud
-		- Manage your account and preferences
+	- Respond to enquiries and provide quotations.
+	- Assess project requirements and produce custom prints.
+	- Process payments and arrange deliveries.
+	- Communicate order updates and provide customer support.
+	- Improve our website and services.
+	- Prevent fraud and comply with legal obligations.
 
-	1. ##### To Improve Our Services
-		- Analyze usage patterns and trends
-		- Develop new features and services
-		- Personalize your experience
-		- Conduct research and surveys
+1. ### Information Sharing and Security
 
-	1. ##### For Marketing and Communications
-		- Send promotional emails (with your consent)
-		- Notify you about new products or features
-		- Share relevant offers and recommendations
-		- Administer contests and promotions
+	We do not sell your personal information. We may share relevant information with trusted service providers, including payment processors, website hosting providers, communication services and delivery partners, where necessary to provide our services.
 
-	1. ##### For Legal and Security Purposes
-		- Comply with legal obligations
-		- Enforce our Terms and Conditions
-		- Protect the rights and safety of our users
-		- Prevent fraudulent activities
+	We take reasonable measures to protect your personal information and project files against unauthorised access, disclosure, alteration or loss. However, no electronic storage or transmission method is completely secure.
 
-1. ### How We Share Your Information
+1. ### Customer Designs and Intellectual Property
 
-	1. ##### With Other Users
-		- **Public Profiles:** Your public profile information is visible to other users
-		- **Reviews and Comments:** When you leave a review or comment on an item, this will be visible to other users.
+	We respect the ownership and confidentiality of customer designs and project files.
 
-	1. ##### With Service Providers
-		We share information with trusted third parties who help us operate our business:
-		- Payment processors (Paystack, Stripe, PayPal, etc.)
-		- Shipping carriers (inDrive, USPS, FedEx, UPS, etc.)
-		- Analytics and marketing services
+	- You retain ownership of designs and materials you provide to us.
+	- We use submitted files only to assess and fulfil your project, unless otherwise authorised or legally required.
+	- We will seek your permission before featuring identifiable customer work in our portfolio, website or marketing materials.
+	- We take reasonable steps to protect submitted files against unauthorised access or disclosure.
 
-	1. ##### For Legal Reasons
-		We may disclose information if required by:
-		- Law enforcement or government agencies
-		- Court orders or legal processes
-		- To protect our rights or property
-		- In connection with a business transfer (merger, acquisition)
+1. ### Data Retention and Your Rights
 
-	1. ##### Aggregate/Anonymized Data
-		We may share aggregated or anonymized data that cannot identify you for:
-		- Business analytics
-		- Industry reports
-		- Marketing purposes
+	We retain personal information and project files only for as long as necessary to fulfil orders, provide support, maintain business records and meet legal obligations.
 
-1. ### Data Security
+	Depending on applicable laws, you may request access to, correction or deletion of your personal information, or withdraw consent where applicable.
 
-	We implement appropriate security measures to protect your information:
-	- **Encryption:** SSL/TLS encryption for data transmission
-	- **Access Controls:** Limited employee access to personal data
-	- **Secure Storage:** Industry-standard security for data storage
-	- **Regular Audits:** Security assessments and vulnerability testing
+1. ### Third-Party Services and Policy Updates
 
-1. ### Your Rights and Choices
+	Our website may contain links to third-party websites and services. We are not responsible for their privacy practices and encourage you to review their policies.
 
-	1. ##### Access and Correction
-		You can access and update your information through your account settings. For other requests, please [contact us](https://meji.ng/contact).
-
-	1. ##### Data Portability
-		You can request a copy of your data in a structured, machine-readable format.
-
-	1. ##### Deletion
-		You can request deletion of your account and personal data, subject to legal retention requirements.
-
-	1. ##### Marketing Preferences
-		You can opt-out of marketing communications by:
-		- Clicking "unsubscribe" in emails
-		- Adjusting notification settings in your account
-		- Contacting us directly
-
-1. ### Children's Privacy
-
-	Meji is not intended for children under 18. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please [contact us](https://meji.ng/contact) immediately.
-
-1. ### Data Retention
-
-	We retain your information for as long as necessary:
-	- To fulfill the purposes outlined in this policy
-	- To comply with legal obligations
-	- To resolve disputes
-	- To enforce our agreements
-
-	Typical retention periods:
-	- Account information: 7 years after last activity
-	- Transaction records: 7 years for tax purposes
-	- Marketing data: Until you opt-out
-
-1. ### Third-Party Links
-
-	Our Site may contain links to third-party websites. We are not responsible for their privacy practices. We encourage you to review their privacy policies.
-
-1. ### Changes to This Policy
-
-	We may update this Privacy Policy periodically. We will notify you of significant changes by:
-	- Posting the updated policy on our Site
-	- Sending email notifications
-	- Updating the "Last Updated" date
-
-	Your continued use after changes constitutes acceptance of the revised policy.
+	We may update this Privacy Policy periodically. Changes will be published on this page with an updated revision date.
 
 1. ### Contact Information
 
-	For privacy-related questions or requests, [contact us](https://meji.ng/contact)
+	For questions or requests concerning your privacy, please contact us through the channels available on our website.
+
+	- **Business:** Extrude
+	- **Location:** Lagos, Nigeria
+	- **Website:** https://extrude-ten.vercel.app/
+
 ---
 
-*This Privacy Policy was created to be transparent about our practices and to help you make informed decisions about your data.*
-
-`
+*At Extrude, we respect your privacy and treat your ideas, designs and personal information with care.*
+`;
 
 export const cookiesPolicy = `
 1. ### Introduction
 
-	This Cookies Policy explains how Meji uses cookies and similar technologies when you visit our website.
+	This Cookies Policy explains how Extrude uses cookies and similar technologies to support website functionality and improve your browsing experience.
 
 1. ### What Are Cookies?
 
-	Cookies are small text files stored on your device that help websites function and improve user experience.
+	Cookies are small text files stored on your device when you visit a website. They help websites remember preferences, maintain functionality and understand how visitors interact with their pages.
 
 1. ### Types of Cookies We Use
 
-	1. ##### Essential Cookies
-		Required for core functionality such as login, checkout, and security.
+	We may use the following categories of cookies:
 
-	1. ##### Performance Cookies
-		Collect anonymous data on how users interact with our platform to improve performance.
-
-	1. ##### Functionality Cookies
-		Remember your preferences such as language, location, and settings.
-
-	1. ##### Advertising Cookies
-		Used to deliver relevant ads and measure campaign effectiveness.
-
-1. ### Third-Party Cookies
-
-	We may use third-party services that set cookies, including:
-	- Google Analytics
-	- Facebook Pixel
-	- Advertising networks
-
-	These third parties may collect information about your online activities across different websites.
-
-1. ### How We Use Cookies
-
-	We use cookies to:
-	- Keep you signed in
-	- Remember your preferences
-	- Analyze usage and improve performance
-	- Deliver personalized content and ads
+	- **Essential Cookies:** Required for basic website functionality, security and essential operations.
+	- **Analytics Cookies:** Help us understand website traffic, visitor behaviour and performance.
+	- **Functional Cookies:** Remember preferences and settings to improve your browsing experience.
+	- **Third-Party Cookies:** May be placed by external services integrated into our website.
 
 1. ### Managing Cookies
 
-	You can control cookies through your browser settings:
-	- Block or delete cookies
-	- Set site-specific preferences
-	- Use privacy-focused extensions
+	You can manage, block or delete cookies through your browser settings.
 
-	Note: Disabling cookies may affect some features of the site.
+	Disabling certain cookies may affect some website features. Where required, we will obtain your consent before using non-essential cookies.
+
+1. ### Changes and Contact Information
+
+	We may update this policy to reflect changes in our website or use of cookies. Updates will be published on this page.
+
+	For questions about our use of cookies, please contact us through our website.
+
+	- **Business:** Extrude
+	- **Location:** Lagos, Nigeria
+	- **Website:** https://extrude-ten.vercel.app/
+
+---
+
+*This policy explains how we use cookies to support and improve your experience on Extrude.*
 `;
