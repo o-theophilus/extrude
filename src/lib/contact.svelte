@@ -86,34 +86,31 @@ Project details: ${answers.description || '—'}`);
 	.choices {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 8px;
+		gap: 4px;
 	}
 
 	button {
 		all: unset;
 		cursor: pointer;
 
-		padding: 4px 16px;
+		padding: 3px 16px;
 		border-radius: 100px;
 		font-size: 0.8rem;
-		outline: 1px solid var(--ol);
-		outline-offset: -1px;
-		color: var(--ft2);
+		background-color: var(--input);
+		color: var(--text3);
+
+		&:hover {
+			color: var(--ft1);
+		}
+
+		&.active {
+			background-color: var(--cl1);
+			color: white;
+		}
 
 		transition:
 			background-color 0.2s ease-in-out,
-			color 0.2s ease-in-out,
-			outline-color 0.2s ease-in-out;
-	}
-
-	button:hover {
-		color: var(--ft1);
-	}
-
-	button.active {
-		background-color: var(--cl1);
-		outline-color: transparent;
-		color: white;
+			color 0.2s ease-in-out;
 	}
 
 	.note {

@@ -170,7 +170,7 @@
 
 		p,
 		li {
-			color: hsl(0, 0%, 60%);
+			color: var(--text2);
 		}
 
 		.outline {

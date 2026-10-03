@@ -65,7 +65,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		gap: 0 8px;
-		color: hsl(0, 0%, 60%);
+		color: var(--text2);
 	}
 
 	button {
