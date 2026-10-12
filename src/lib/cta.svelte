@@ -36,6 +36,7 @@
 		align-items: center;
 		gap: 8px;
 
+		width: fit-content;
 		height: 48px;
 		border-radius: 4px;
 		padding: 0 16px;

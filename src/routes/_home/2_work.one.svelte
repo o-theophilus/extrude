@@ -4,7 +4,7 @@
 </script>
 
 <div class="card brad_16 dark">
-	<img src="gallery/{one.img}" alt={one.title} />
+	<img src="/files/{one.img}" alt={one.title} />
 	<div class="detail padding_16">
 		<h5>{one.title}</h5>
 		<div class="hidden">

@@ -7,10 +7,10 @@
 		onprogress={(e) => {
 			progress = e.detail.totalProgress;
 		}}
-		src="model.glb"
+		src="/files/hero.1.glb"
 		camera-controls
 		tone-mapping="neutral"
-		poster="model.webp"
+		poster="/files/hero.1.webp"
 		shadow-intensity="1"
 		shadow-softness="1"
 		auto-rotate

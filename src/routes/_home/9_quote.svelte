@@ -49,7 +49,7 @@
 </script>
 
 <div class="bg_2 dark">
-	<video src="/image/bg.mp4" autoplay muted loop playsinline></video>
+	<video src="/files/quote.1.mp4" autoplay muted loop playsinline></video>
 	<section id="what-we-print">
 		<div class="padding_5 grid_container">
 			<h2 class="max_text">Get a quote based on your project.</h2>
