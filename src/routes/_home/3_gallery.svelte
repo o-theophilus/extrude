@@ -4,7 +4,7 @@
 	let { gallery } = $props();
 </script>
 
-<div class="light bg_6 margin_160 grid_container">
+<div class="light margin_160 grid_container">
 	<section>
 		<h2>Made by Extrude</h2>
 		<p class="margin_8 font_14 max_text">
@@ -13,7 +13,7 @@
 		</p>
 	</section>
 
-	<Carousel --max-width="600px" no_pad gap={10}>
+	<Carousel --max-width="512px" no_pad gap={10}>
 		{#each gallery as x}
 			<div class="one brad_16 outline shadow">
 				<img src={x.src} alt={x.name} loading="lazy" draggable="false" />

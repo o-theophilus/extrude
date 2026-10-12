@@ -4,7 +4,7 @@
 	let {
 		title = 'Page',
 		description = '',
-		image = `${page.url.origin}/model.webp`
+		image = `${page.url.origin}/files/hero.1.webp`
 	} = $props();
 
 	title = `${title} | Extrude`;

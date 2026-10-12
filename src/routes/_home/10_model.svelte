@@ -27,7 +27,7 @@
 					</div>
 				</div>
 
-				<img src="image/design.webp" alt="3d modelling" class="brad_16" />
+				<img src="/files/model.1.webp" alt="3d modelling" class="brad_16" />
 			</div>
 		</div>
 	</section>
