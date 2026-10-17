@@ -4,8 +4,9 @@
 		{ name: 'Apex Labs', img: 'apex.svg' },
 		{ name: 'Lumen', img: 'lumen.svg' },
 		{ name: 'Forge & Co', img: 'forge.svg' },
-		{ name: 'Orbit', img: 'orbit.svg' },
-		{ name: 'Vertex', img: 'vertex.svg' }
+		{ name: 'Meji', img: 'meji.svg' },
+		{ name: 'Vertex', img: 'vertex.svg' },
+		{ name: 'Electetra Engineering', img: 'electetra.svg' }
 	];
 </script>
 
@@ -13,7 +14,7 @@
 	<section>
 		<p class="center font_14">Trusted by teams and makers</p>
 
-		<div class="marquee margin_24">
+		<div class="marquee margin_24" style="--length: {clients.length}">
 			<div class="track">
 				{#each clients as x}
 					<img src="/partners/{x.img}" alt={x.name} />
@@ -29,7 +30,7 @@
 <style>
 	.marquee {
 		--gap: 40px;
-		--duration: 30s;
+		--duration: calc(var(--length) * 4s);
 
 		overflow: hidden;
 		mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -41,7 +42,7 @@
 
 	@keyframes scroll {
 		to {
-			transform: translateX(-50%);
+			transform: translateX(calc(-50% - var(--gap) / 2));
 		}
 	}
 	.track {
@@ -58,7 +59,7 @@
 
 	img {
 		flex: none;
-		height: 36px;
+		height: 40px;
 		opacity: 0.6;
 		transition: opacity 0.2s ease-in-out;
 
